@@ -57,8 +57,8 @@ public class HotDrinksMachine
 
     @Override
     public String toString() {
-        return "HotDrinksMachine [name=" + name + ", volume=" + volume + ", temperature=" + temperature + ", cost="
-                + cost + "]";
+        return "Range of Vending machine: " + name + ", Volume - " + volume + ", Temperature - " + temperature + ", Cost - "
+                + cost + "$";
     }
  
 }
