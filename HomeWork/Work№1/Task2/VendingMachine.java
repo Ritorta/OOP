@@ -10,7 +10,7 @@ public class VendingMachine
     public void getProducts (List<HotDrinksMachine> newProduct)
     {
         this.producList = newProduct;
-        System.out.println(newProduct);
+        System.out.println(producList);
     }
 
     public void SearchName(String name)
