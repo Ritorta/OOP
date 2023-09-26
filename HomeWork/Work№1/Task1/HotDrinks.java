@@ -40,11 +40,11 @@ public class HotDrinks
     @Override
     public String toString() 
     {
-        return "HotDrinks [Name = " + name + ", Cost = " + cost + " $]";
+        return "Select drink: " + name + " - cost - " + cost + "$";
     }
     
     public void printInfo()
     {
-        System.out.println("Select drinks coffe, " + name + " cost - " + cost + " $");
+        System.out.println("Select drink: " + name + " - cost - " + cost + "$");
     }
 }

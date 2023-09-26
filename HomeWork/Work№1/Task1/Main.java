@@ -10,11 +10,11 @@ public class Main
     public static void main(String[] args)
     {
         HotDrinks hotDrinks = new HotDrinks();
-        hotDrinks.setName("Coffe");
+        hotDrinks.setName("Cocoa");
         hotDrinks.setCost(9.99);
 
         HotDrinks tempDrinks = new TempDrinks();
-        tempDrinks.setName("Hot Coffe");
+        tempDrinks.setName("Hot Cocoa");
         tempDrinks.setCost(13.99);
         tempDrinks.setTemperature(99);
         
