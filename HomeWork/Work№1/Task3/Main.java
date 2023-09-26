@@ -5,6 +5,7 @@
 
 package Task3;
 
-public class Main {
+public class Main 
+{
     
 }
