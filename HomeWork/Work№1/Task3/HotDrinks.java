@@ -7,7 +7,6 @@ public class HotDrinks extends DrinksMachine
     {
 
         super(name, volume, temperature, cost);
-        //TODO Auto-generated constructor stub
 
     }
 
