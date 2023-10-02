@@ -1,7 +1,5 @@
 package Task2;
 
-
-
 public abstract class Actor implements ActorBehaviuor
 {
     protected String name;
@@ -32,18 +30,4 @@ public abstract class Actor implements ActorBehaviuor
     {
         this.isTakeOrder = isTakeOrder;
     }
-    
-    
-
-    
-
-    
-
-
-
-  
-
-    
-    
 }
-
