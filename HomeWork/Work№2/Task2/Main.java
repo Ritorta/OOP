@@ -21,7 +21,8 @@ public class Main
         magazin.giveOrders(); // сделал заказ
         magazin.takeOrders(); // получил заказ
         magazin.ReleaseFromQueue(); // покинул очередь
-        magazin.releaseFromMarket(name); // покинул магаин 
+        magazin.releaseFromMarket(name); // покинул магаин
+        magazin.update(); 
 
 
       
