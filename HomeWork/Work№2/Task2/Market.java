@@ -20,8 +20,8 @@ public class Market implements MarketBehaviour, QueueBehaviour
     @Override
     public void releaseFromMarket(List<Actor> actors) 
     {
-        this.buyer = actors;
-        System.out.println(actors.size() + " Get out from Market");
+        
+        System.out.println(actors.equals(actors) + " Get out from Market");
         buyer.remove(actors);
         
     }
@@ -60,5 +60,12 @@ public class Market implements MarketBehaviour, QueueBehaviour
         buyerQueue.add(actor);
         System.out.println(actor.getName() + " Stay in queue");
     }
+
+    //---------------------костыль------------------------
+    // public void releaseFromMarket(Human name) 
+    // {
+    //     System.out.println(name.getName() + " Get out from Market");
+    //     buyer.remove(name);
+    // }
     
 }
