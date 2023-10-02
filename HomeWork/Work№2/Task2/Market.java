@@ -9,19 +9,20 @@ public class Market implements MarketBehaviour, QueueBehaviour
 {
     public List<Actor> buyer = new ArrayList<>();
     public Queue<Actor> buyerQueue = new ArrayDeque<>();
+    
         
     @Override
     public void acceptToMarket(Actor actor) 
     {
         buyer.add(actor);
         System.out.println(actor.getName() + " Went to the Market");
+        
     }
-
+  
     @Override
     public void releaseFromMarket(List<Actor> actors) 
     {
-        
-        System.out.println(actors.equals(actors) + " Get out from Market");
+        System.out.println(actors.get(0) + " Get out from Market");
         buyer.remove(actors);
         
     }
@@ -61,7 +62,7 @@ public class Market implements MarketBehaviour, QueueBehaviour
         System.out.println(actor.getName() + " Stay in queue");
     }
 
-    //---------------------костыль------------------------
+    //---------------------костыль но работает однако не по заданию------------------------
     // public void releaseFromMarket(Human name) 
     // {
     //     System.out.println(name.getName() + " Get out from Market");

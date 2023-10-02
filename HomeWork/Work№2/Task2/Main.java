@@ -5,6 +5,8 @@
 
 package Task2;
 
+import java.util.ArrayList;
+import java.util.List;
 public class Main 
 {
     public static void main(String[] args) 
@@ -12,8 +14,14 @@ public class Main
         Human name = new Human();
         name.setName("Horse");
 
-        // name.setMakeOrder();
-        // name.setTakeOrder();
+        name.setMakeOrder();
+        name.setTakeOrder();
+       
+        List<Actor> addbuyers = new ArrayList<>();
+
+
+        addbuyers.add(name);
+
         Market magazin = new Market();
 
         magazin.acceptToMarket(name); // зашёл
@@ -21,7 +29,7 @@ public class Main
         magazin.giveOrders(); // сделал заказ
         magazin.takeOrders(); // получил заказ
         magazin.ReleaseFromQueue(); // покинул очередь
-        magazin.releaseFromMarket(name); // покинул магаин
+        magazin.releaseFromMarket(addbuyers); // покинул магаин
         magazin.update(); 
 
 
