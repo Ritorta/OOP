@@ -78,7 +78,7 @@ public class DrinksMachine
     public String toString() 
     {
 
-       return ("HotDrinks - Select drink: " + name + ", Volume - " + volume + ", Temperature - " + temperature + ", Cost - "
+       return ("\nHotDrinks - Select drink: " + name + ", Volume - " + volume + ", Temperature - " + temperature + ", Cost - "
                 + cost + "$");
 
     }

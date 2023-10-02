@@ -23,5 +23,13 @@ public class Main
         vendingproduct.SearchName("Coffe");
         vendingproduct.SearchVolume(0.9);
         vendingproduct.SearchTemperature(120);
+
+        HotDrinks hotDrinks = new HotDrinks("Cocoa", 0.2, 100, 0.99);
+
+        hotDrinks.setName("Sugar-Cocoa");
+        hotDrinks.setCost(1.00);
+
+        System.out.println(hotDrinks);
+        hotDrinks.printInfo();
     }
 }
