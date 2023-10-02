@@ -7,54 +7,57 @@ public class Market implements MarketBehaviour, QueueBehaviour
 {
     List<Actor> buyer;
     Queue<Actor> buyerQueue;
+    
+    
 
     @Override
     public void acceptToMarket(Actor actor) 
     {
+        buyer.add(actor);
         System.out.println(actor.getName() + "Went to the Market");
-        
     }
 
     @Override
     public void releaseFromMarket(List<Actor> actors) 
     {
-        // TODO Auto-generated method stub
+        buyer.remove(actors);
+        System.out.println(actors.getName() + "Get out from Market");
         
     }
 
     @Override
     public void update() 
     {
-        // TODO Auto-generated method stub
+    
         
     }
 
     @Override
     public void ReleaseFromQueue() 
     {
-        // TODO Auto-generated method stub
-        
+        buyerQueue.poll();
+        System.out.println(buyerQueue.peek().getName() + "Get out from queue");
     }
 
     @Override
     public void giveOrders() 
     {
-        // TODO Auto-generated method stub
-        
+        buyerQueue.peek().isMakeOrder();
+        System.out.println(buyerQueue.peek().getName() + "Make order");
     }
 
     @Override
     public void takeOrders() 
     {
-        // TODO Auto-generated method stub
-        
+       buyerQueue.peek().isTakeOrder();
+       System.out.println(buyerQueue.peek().getName() + "Take order"); 
     }
 
     @Override
     public void takelnQueue(Actor actor) 
     {
-        // TODO Auto-generated method stub
-        
+        buyerQueue.add(actor);
+        System.out.println(actor.getName() + "Stay in queue");
     }
     
 }

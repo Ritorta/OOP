@@ -12,9 +12,18 @@ public class Main
         Human name = new Human();
         name.setName("Horse");
 
-        name.setMakeOrder();
-        name.setTakeOrder();
-        
+        // name.setMakeOrder();
+        // name.setTakeOrder();
+        Market magazin = new Market();
+
+        magazin.acceptToMarket(name); // зашёл
+        magazin.takelnQueue(name); // встал в очередь
+        magazin.giveOrders(); // сделал заказ
+        magazin.takeOrders(); // получил заказ
+        magazin.ReleaseFromQueue(); // покинул очередь
+        magazin.releaseFromMarket(name); // покинул магаин 
+
+
       
         System.out.println(name);
     } 

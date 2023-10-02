@@ -33,6 +33,7 @@ public abstract class Actor implements ActorBehaviuor
         this.isTakeOrder = isTakeOrder;
     }
     
+    
 
     
 
