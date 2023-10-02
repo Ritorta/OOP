@@ -1,14 +1,17 @@
 package Task2;
 
 import java.util.List;
+import java.util.Queue;
 
 public class Market implements MarketBehaviour, QueueBehaviour
 {
+    List<Actor> buyer;
+    Queue<Actor> buyerQueue;
 
     @Override
     public void acceptToMarket(Actor actor) 
     {
-        // TODO Auto-generated method stub
+        System.out.println(actor.getName() + "Went to the Market");
         
     }
 
