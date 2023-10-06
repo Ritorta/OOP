@@ -2,7 +2,7 @@ import java.util.Iterator;
 import java.util.ArrayList;
 import java.util.List;
 
-    public class Stream implements Iterator<StudentGroup>,Iterable
+    public class Stream implements Iterator<StudentGroup>, Iterable<StudentGroup>
     {
         private List<StudentGroup> group = new ArrayList<>();
         private int currentIndex = 0;
