@@ -1,5 +1,3 @@
-package Task1;
-
 public abstract class Actor implements ActorBehaviuor
 {
     protected String name;
@@ -9,37 +7,36 @@ public abstract class Actor implements ActorBehaviuor
     public String getName() 
     {
         return name;
+
     }
+
     public void setName(String name) 
     {
         this.name = name;
+
     }
-    public boolean isMakeOrder() 
-    {
-        return isMakeOrder;
-    }
+
     public void setMakeOrder(boolean isMakeOrder) 
     {
         this.isMakeOrder = isMakeOrder;
+        
     }
-    public boolean isTakeOrder() 
+
+    public boolean isMakeOrder() 
     {
-        return isTakeOrder;
+        return isMakeOrder;
+
     }
+
     public void setTakeOrder(boolean isTakeOrder) 
     {
         this.isTakeOrder = isTakeOrder;
+        
     }
 
-    
+     public boolean isTakeOrder() 
+    {
+        return isTakeOrder;
 
-    
-
-
-
-  
-
-    
-    
+    }
 }
-

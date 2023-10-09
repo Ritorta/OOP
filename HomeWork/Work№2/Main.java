@@ -3,8 +3,6 @@
 // MarketBehaviour - помещает и удаляет человека из очереди, 
 // метод update - обновляет состояние магазина (принимает и отдаёт заказы).
 
-package Task2;
-
 import java.util.ArrayList;
 import java.util.List;
 public class Main 
@@ -12,28 +10,27 @@ public class Main
     public static void main(String[] args) 
     {
         Human name = new Human();
-        name.setName("Horse");
+        name.setName("Rita");
 
-        name.setMakeOrder();
-        name.setTakeOrder();
-       
         List<Actor> addbuyers = new ArrayList<>();
-
 
         addbuyers.add(name);
 
         Market magazin = new Market();
 
-        magazin.acceptToMarket(name); // зашёл
-        magazin.takelnQueue(name); // встал в очередь
-        magazin.giveOrders(); // сделал заказ
-        magazin.takeOrders(); // получил заказ
-        magazin.ReleaseFromQueue(); // покинул очередь
-        magazin.releaseFromMarket(addbuyers); // покинул магаин
+        magazin.acceptToMarket(name); // Клиент зашёл
+        magazin.takelnQueue(name); // Клиент встал в очередь
+        magazin.giveOrders(); // Клиент сделал заказ
+      //  name.setMakeOrder(); // Проверка на успешность
+        magazin.takeOrders(); //Клиент получил заказ
+      //  name.setTakeOrder(); // Проверка на успешность
+        magazin.ReleaseFromQueue(); // Клиент покинул очередь
+        magazin.releaseFromMarket(addbuyers); // Клиент покинул магаин
         magazin.update(); 
+      //  System.out.println(name); // Строка с именем и проверкой.
 
 
       
-      //  System.out.println(name);
+        
     } 
 }
