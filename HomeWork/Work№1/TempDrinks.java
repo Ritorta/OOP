@@ -10,5 +10,6 @@ public class TempDrinks extends HotDrinks
     public void printInfo() 
     {
         System.out.println("HotDrinks - Select drink: " + name + ", Temperature - " + temperature + " C, Cost - " + cost + "$");
+        
     }
 }

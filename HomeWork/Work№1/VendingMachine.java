@@ -3,12 +3,13 @@ import java.util.List;
 
 public class VendingMachine 
 {
-    public List<HotDrinksMachine> producList = new ArrayList<>();
+    private List<HotDrinksMachine> producList = new ArrayList<>();
 
     public void getProducts (List<HotDrinksMachine> newProduct)
     {
         this.producList = newProduct;
         System.out.println(producList);
+
     }
 
     public void SearchName(String name)
@@ -20,6 +21,7 @@ public class VendingMachine
                 System.out.println(producList.get(i));    
             }
         }
+
     }
 
     public void SearchVolume(Double volume)
@@ -31,6 +33,7 @@ public class VendingMachine
                 System.out.println(producList.get(i));    
             }
         }
+
     }
 
     public void SearchTemperature(int temperature)
@@ -43,4 +46,5 @@ public class VendingMachine
             }
         }
     }
+    
 }

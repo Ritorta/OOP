@@ -34,7 +34,7 @@ public class Main
         hotDrinks.setName("Sugar-Cocoa");
         hotDrinks.setCost(1.00);
 
-        
         hotDrinks.printInfo();
+        
     }
 }
