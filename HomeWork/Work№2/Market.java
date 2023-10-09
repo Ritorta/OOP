@@ -25,15 +25,8 @@ public class Market implements MarketBehaviour, QueueBehaviour
             buyer.remove(actor);
             System.out.println(actor.getName() + " Get out from Market");
         }
-
         
     }
- //---------------------костыль но работает однако не по заданию------------------------
-    // public void releaseFromMarket(Human name) 
-    // {
-    //     System.out.println(name.getName() + " Get out from Market");
-    //     buyer.remove(name);
-    // }
     
     @Override
     public void update() 
