@@ -1,3 +1,5 @@
+// Work №3, Урок 3. Некоторые стандартные интерфейсы Java и примеры их использования
+
 // — Создать класс Поток, содержащий в себе список УчебныхГрупп и реализующий интерфейс Iterable(Iterator);
 // — Создать класс StreamComparator, реализующий сравнение количества групп, входящих в Поток;
 // — Создать класс ПотокСервис, добавив в него метод сортировки списка потоков, используя созданный StreamComparator;
@@ -5,3 +7,15 @@
 // — *Модифицировать класс Контроллер, добавив в него метод сортирующий
 // список потоков, путем вызова созданного сервиса
  
+
+public class Main
+{
+public static void main(String[] args)
+{
+    StudentGroup group1 = new StudentGroup("One", 50);
+    StudentGroup group2 = new StudentGroup("Two", 150);
+    StudentGroup group3 = new StudentGroup("Fthie", 10);
+
+    
+}
+}
