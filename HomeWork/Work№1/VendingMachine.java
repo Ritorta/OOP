@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-
 public class VendingMachine 
 {
     private List<HotDrinksMachine> producList = new ArrayList<>();
@@ -46,5 +45,5 @@ public class VendingMachine
             }
         }
     }
-    
+
 }
