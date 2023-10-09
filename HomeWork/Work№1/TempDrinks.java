@@ -1,7 +1,11 @@
-package Task1;
-
 public class TempDrinks extends HotDrinks 
 {     
+    public TempDrinks(String name, Double volume, int temperature, Double cost) 
+    {
+        super(name, volume, temperature, cost);
+        
+    }
+
     @Override
     public void printInfo() 
     {

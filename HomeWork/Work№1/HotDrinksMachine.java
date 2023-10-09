@@ -1,65 +1,84 @@
-package Task2;
-
 public class HotDrinksMachine 
 {
-    private String name;
-    private Double volume;
-    private int temperature;
-    private Double cost;
+    protected String name;
+    protected Double volume;
+    protected int temperature;
+    protected Double cost;
 
-    public String getName()
+    public String getName() 
     {
+
         return name;
+
     }
 
-    public void setName(String name)
+    public void setName(String name) 
     {
+
         this.name = name;
+
     }
 
-    public Double getVolume()
+    public Double getVolume() 
     {
+
         return volume;
-    }
 
-    public void setVolune(Double volume)
+    }
+    
+    public void setVolume(Double volume) 
     {
+
         this.volume = volume;
+
     }
 
-    public int getTemperature()
+    public int getTemperature() 
     {
+
         return temperature;
+
     }
 
-    public void setTemperature(int temperature)
+    public void setTemperature(int temperature) 
     {
+
         this.temperature = temperature;
+
     }
 
     public Double getCost() 
     {
+
         return cost;
+
     }
 
     public void setCost(Double cost) 
     {
+
         this.cost = cost;
+        
     }
 
     public HotDrinksMachine(String name, Double volume, int temperature, Double cost) 
     {
+
         this.name = name;
         this.volume = volume;
         this.temperature = temperature;
         this.cost = cost;
+
     }
 
+    
     @Override
-    public String toString() {
-        return "Range of Vending machine: " + name + ", Volume - " + volume + ", Temperature - " + temperature + ", Cost - "
-                + cost + "$";
+    public String toString() 
+    {
+
+       return ("\nHotDrinks - Select drink: " + name + ", Volume - " + volume + ", Temperature - " + temperature + ", Cost - "
+                + cost + "$");
+
     }
- 
+    
 }
- 
