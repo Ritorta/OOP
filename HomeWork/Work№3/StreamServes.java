@@ -1,12 +1,11 @@
-import java.util.Comparator;
 import java.util.List;
 
 public class StreamServes 
 {
-    
-    public void sortStream(List<Stream> streams)
+    public static List<Stream> sortStreams(List<Stream> allStreams, StreamComparator compare) 
     {
-        streams.sort(new StreamComparator());
-        
+        allStreams.sort((stream1, stream2) -> compare.compare(stream1, stream2));
+        return allStreams;
+
     }
 }

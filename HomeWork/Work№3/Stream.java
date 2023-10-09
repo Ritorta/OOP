@@ -18,5 +18,16 @@ import java.util.List;
             return group.iterator();
             
         }
+
+        public void printInfo()
+        {
+        for (StudentGroup group : group) 
+            {
+                System.out.println("- " + group.getNameGroup() + " (" + group.getNumberStudent() + " students)");
+            }
+            
+        }
     }
 
+ 
+    
