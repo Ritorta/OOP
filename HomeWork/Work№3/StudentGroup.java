@@ -1,13 +1,12 @@
 public class StudentGroup 
 {
-    protected String nameGroup;
-    // protected int numberStudent;
+    private String nameGroup;
+    private int numberStudent;
 
-    // public StudentGroup(String nameGroup, int numberStudent) 
-    public StudentGroup(String nameGroup) 
+    public StudentGroup(String nameGroup, int numberStudent)
     {
         this.nameGroup = nameGroup;
-    //    this.numberStudent = numberStudent;
+        this.numberStudent = numberStudent;
         
     }
 
@@ -23,18 +22,15 @@ public class StudentGroup
 
     }
 
-    // public int getNumberStudent() 
-    // {
-    //     return numberStudent;
+    public int getNumberStudent() 
+    {
+        return numberStudent;
 
-    // }
+    }
     
-    // public void setNumberStudent(int numberStudent) 
-    // {
-    //     this.numberStudent = numberStudent;
+    public void setNumberStudent(int numberStudent) 
+    {
+        this.numberStudent = numberStudent;
 
-    // }
-    
-
-    
+    }
 }
