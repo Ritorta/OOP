@@ -12,26 +12,33 @@ public class Main
 {
     public static void main(String[] args)   
     { 
-        HotDrinksMachine DrinkProductCoffe = new HotDrinksMachine("Coffe", 0.4, 96, 89.99);
-        HotDrinksMachine DrinkProductTea = new HotDrinksMachine("Tea", 0.5, 120, 34.99);
-        HotDrinksMachine DrinkProductWatter = new HotDrinksMachine("Watter", 0.9, 0, 59.99);
+        // HotDrinksMachine DrinkProductCoffe = new HotDrinksMachine("Coffe", 0.4, 96, 89.99);
+        // HotDrinksMachine DrinkProductTea = new HotDrinksMachine("Tea", 0.5, 120, 34.99);
+        // HotDrinksMachine DrinkProductWatter = new HotDrinksMachine("Watter", 0.9, 0, 59.99);
         
-        List<HotDrinksMachine> addProduct = new ArrayList<>(List.of(DrinkProductCoffe, DrinkProductTea, DrinkProductWatter));
+        // List<OldHotDrinksMachine> addProduct = new ArrayList<>(List.of(DrinkProductCoffe, DrinkProductTea, DrinkProductWatter));
 
-        VendingMachine vendingproduct = new VendingMachine();
-        vendingproduct.getProducts(addProduct);
-        vendingproduct.SearchName("Coffe");
-        vendingproduct.SearchVolume(0.9);
-        vendingproduct.SearchTemperature(120);
+        // OldVendingMachine vendingproduct = new OldVendingMachine();
+        // vendingproduct.getProducts(addProduct);
+        // vendingproduct.SearchName("Coffe");
+        // vendingproduct.SearchVolume(0.9);
+        // vendingproduct.SearchTemperature(120);
 
-        HotDrinks hotDrinks = new HotDrinks("Cocoa", 0.2, 100, 0.99);
-
+        HotDrinks hotDrinks = new HotDrinks();
+        hotDrinks.setName("Cocola");
+        hotDrinks.setVolume(0.5);
+        hotDrinks.setCost(9.99);
         System.out.println(hotDrinks);
-        
-        hotDrinks.setName("Sugar-Cocoa");
-        hotDrinks.setCost(1.00);
 
-        hotDrinks.printInfo();
+        TempDrinks tempDrinks = new TempDrinks();
+        tempDrinks.setName("Hot Tea");
+        tempDrinks.setVolume(0.8);
+        tempDrinks.setCost(13.99);
+        tempDrinks.setTemperature(99);
+        System.out.println(tempDrinks);
+        
+        // hotDrinks.printInfo();
+        // tempDrinks.printInfo();
 
     }
 }

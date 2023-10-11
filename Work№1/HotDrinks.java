@@ -1,22 +1,55 @@
-public class HotDrinks extends HotDrinksMachine
+public class HotDrinks 
 {
-    public HotDrinks(String name, Double volume, int temperature, Double cost) 
+    protected String name;
+    protected Double volume;
+    protected Double cost;
+
+    public String getName() 
     {
-        super(name, volume, temperature, cost);
-  
+        return name;
     }
+
+    public void setName(String name) 
+    {
+        this.name = name;
+    }
+
+    public Double getVolume() 
+    {
+        return volume;
+    }
+
+    public void setVolume(Double volume) 
+    {
+        this.volume = volume;
+    }
+
+    public Double getCost() 
+    {
+        return cost;
+    }
+
+    public void setCost(Double cost) 
+    {
+        this.cost = cost;
+    }
+
+    // public HotDrinks(String name, Double volume, Double cost) 
+    // {
+    //     this.name = name;
+    //     this.volume = volume;
+    //     this.cost = cost;
+    // }
 
     @Override
     public String toString() 
     {
-        return  super.toString();
-        
+        return "Select drink: " + name + ", Volume: " + volume + ", Cost - " + cost + "$";
     }
-    
-    public void printInfo()
-    {
-        System.out.println("Select drink: " + name + " - cost - " + cost + "$");
 
-    }
-    
+    public void printInfo() 
+    {
+        System.out.println("HotDrinks - Select drink: " + name + ", Cost - " + cost + "$");
+    }    
 }
+
