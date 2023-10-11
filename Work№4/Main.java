@@ -17,11 +17,11 @@ public class Main
         TeacherServes Validate = new TeacherServes();
         TeacherController Controller = new TeacherController(Validate, View);
 
-        Controller.addTeacher("jon", "Math");
-        Controller.addTeacher("Fox", "English");
-        Controller.addTeacher("", "Sleep");
+        Controller.addTeacher("Jon", "Math");
+        Controller.addTeacher("Bell", "English");
+        Controller.addTeacher("Roman", "Programming");
 
-        Controller.editTeacher(1, "Bell", "Physics");
+        Controller.editTeacher(2, "Horse", "Physics");
         
         Controller.TeacherView();
     }

@@ -16,21 +16,20 @@ public class TeacherController
 
     public void addTeacher(String name, String object)
     {
-        
-
         Teacher createteacher = new Teacher(name, object);
-        int index = 0;
-        index ++;
-
+        int currenindex = teacherList.size();
+        
+        
         if(teacherServes.validateCheck(createteacher))
         {
             teacherList.add(createteacher);
-            
+            currenindex ++;
         }
 
         else
         {
-            System.out.println("Error incorrect data teacher!");
+            System.out.println("Error index - " + currenindex + ", incorrect data teacher!");
+
         }
 
     }
