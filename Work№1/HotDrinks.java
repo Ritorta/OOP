@@ -34,12 +34,12 @@ public class HotDrinks
         this.cost = cost;
     }
 
-    // public HotDrinks(String name, Double volume, Double cost) 
-    // {
-    //     this.name = name;
-    //     this.volume = volume;
-    //     this.cost = cost;
-    // }
+    public HotDrinks(String name, Double volume, Double cost) 
+    {
+        this.name = name;
+        this.volume = volume;
+        this.cost = cost;
+    }
 
     @Override
     public String toString() 

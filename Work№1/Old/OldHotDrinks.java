@@ -1,3 +1,4 @@
+package Old;
 public class OldHotDrinks extends OldHotDrinksMachine
 {
     public OldHotDrinks(String name, Double volume, int temperature, Double cost) 

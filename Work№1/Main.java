@@ -18,19 +18,19 @@ public class Main
         
         // List<OldHotDrinksMachine> addProduct = new ArrayList<>(List.of(DrinkProductCoffe, DrinkProductTea, DrinkProductWatter));
 
-        // OldVendingMachine vendingproduct = new OldVendingMachine();
+        // VendingMachine vendingproduct = new VendingMachine();
         // vendingproduct.getProducts(addProduct);
         // vendingproduct.SearchName("Coffe");
         // vendingproduct.SearchVolume(0.9);
         // vendingproduct.SearchTemperature(120);
 
-        HotDrinks hotDrinks = new HotDrinks();
+        HotDrinks hotDrinks = new HotDrinks(null, null, null);
         hotDrinks.setName("Cocola");
         hotDrinks.setVolume(0.5);
         hotDrinks.setCost(9.99);
         System.out.println(hotDrinks);
 
-        TempDrinks tempDrinks = new TempDrinks();
+        TempDrinks tempDrinks = new TempDrinks(null, null, null, 0);
         tempDrinks.setName("Hot Tea");
         tempDrinks.setVolume(0.8);
         tempDrinks.setCost(13.99);

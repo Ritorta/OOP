@@ -12,11 +12,11 @@ public class TempDrinks extends HotDrinks
         this.temperature = temperature;
     }
 
-    // public TempDrinks(String name, Double volume, Double cost, int temperature) 
-    // {
-    //     super(name, volume, cost);
-    //     this.temperature = temperature;
-    // }
+    public TempDrinks(String name, Double volume, Double cost, int temperature) 
+    {
+        super(name, volume, cost);
+        this.temperature = temperature;
+    }
     
     @Override
     public String toString() {

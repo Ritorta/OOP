@@ -1,3 +1,4 @@
+package Old;
 public class OldHotDrinksMachine 
 {
     protected String name;
