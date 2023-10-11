@@ -1,28 +1,40 @@
 public class Teacher 
 {
     protected String name;
-    protected int age;
+    protected String object;
 
     public String getName() 
     {
         return name;
 
     }
+
     public void setName(String name) 
     {
         this.name = name;
 
     }
-    public int getAge() 
+
+    public String getObject() 
     {
-        return age;
+        return object;
 
     }
-    public void setAge(int age) 
+
+    public void setObject(String object) 
     {
-        this.age = age;
+        this.object = object;
+        
+    }
+
+    public Teacher(String name, String object) 
+    {
+        this.name = name;
+        this.object = object;
 
     }
+
+    
 
     
 }
