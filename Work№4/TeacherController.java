@@ -16,16 +16,21 @@ public class TeacherController
 
     public void addTeacher(String name, String object)
     {
+        
+
         Teacher createteacher = new Teacher(name, object);
+        int index = 0;
+        index ++;
 
         if(teacherServes.validateCheck(createteacher))
         {
             teacherList.add(createteacher);
+            
         }
 
         else
         {
-            System.out.println("Error: incorrect data teacher!");
+            System.out.println("Error incorrect data teacher!");
         }
 
     }
@@ -49,6 +54,6 @@ public class TeacherController
     public void TeacherView()
     {
         teacherView.viewTeacherList(teacherList);
-        
+
     }
 }

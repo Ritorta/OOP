@@ -9,3 +9,20 @@
 // -- Создать класс ГруппаУчителей;
 // -- Добавить поле учитель в учебную группу.
 
+public class Main
+{
+    public static void main(String[] args)
+    {
+        TeacherView View = new TeacherView();
+        TeacherServes Validate = new TeacherServes();
+        TeacherController Controller = new TeacherController(Validate, View);
+
+        Controller.addTeacher("jon", "Math");
+        Controller.addTeacher("Fox", "English");
+        Controller.addTeacher("", "Sleep");
+
+        Controller.editTeacher(1, "Bell", "Physics");
+        
+        Controller.TeacherView();
+    }
+}
