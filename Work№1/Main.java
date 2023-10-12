@@ -20,7 +20,7 @@ public class Main
         TempDrinks DrinkProductTea = new TempDrinks("Tea", 0.5, 34.99, 120);
         TempDrinks DrinkProductWatter = new TempDrinks("Watter", 0.9, 59.99, 0);
         
-        List<HotDrinks> addProduct = new ArrayList<>(List.of(DrinkProductCoffe, DrinkProductTea, DrinkProductWatter));
+        List<TempDrinks> addProduct = new ArrayList<>(List.of(DrinkProductCoffe, DrinkProductTea, DrinkProductWatter));
 
         HotDrinksMachine vendingproduct = new HotDrinksMachine(addProduct);
         vendingproduct.addProducts(addProduct);

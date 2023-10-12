@@ -3,10 +3,10 @@ import java.util.List;
 
 public class HotDrinksMachine implements VendingMachine
 {
-    protected List<HotDrinks> addproduct = new ArrayList<>();
+    protected List<TempDrinks> addproduct = new ArrayList<>();
 
     @Override
-    public void addProducts (List<HotDrinks> newProduct)
+    public void addProducts (List<TempDrinks> newProduct)
     {
         this.addproduct = newProduct;
         System.out.println(addproduct);
@@ -51,7 +51,7 @@ public class HotDrinksMachine implements VendingMachine
         }
     }
 
-    public HotDrinksMachine(List<HotDrinks> addproduct)
+    public HotDrinksMachine(List<TempDrinks> addproduct)
     {
         this.addproduct = addproduct;
     }
