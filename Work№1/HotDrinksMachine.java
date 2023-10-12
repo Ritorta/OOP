@@ -55,20 +55,4 @@ public class HotDrinksMachine implements VendingMachine
     {
         this.addproduct = addproduct;
     }
-
-
-   
-
-  
-
-   
-
-   
-
-    
-
-    
-
-    
-
 }

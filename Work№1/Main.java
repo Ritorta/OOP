@@ -12,28 +12,27 @@ public class Main
 {
     public static void main(String[] args)   
     { 
-        // HotDrinksMachine DrinkProductCoffe = new HotDrinksMachine("Coffe", 0.4, 96, 89.99);
-        // HotDrinksMachine DrinkProductTea = new HotDrinksMachine("Tea", 0.5, 120, 34.99);
-        // HotDrinksMachine DrinkProductWatter = new HotDrinksMachine("Watter", 0.9, 0, 59.99);
-
         TempDrinks DrinkProductCoffe = new TempDrinks("Coffe", 0.4, 89.99, 96);
         TempDrinks DrinkProductTea = new TempDrinks("Tea", 0.5, 34.99, 120);
         TempDrinks DrinkProductWatter = new TempDrinks("Watter", 0.9, 59.99, 0);
         
         List<TempDrinks> addProduct = new ArrayList<>(List.of(DrinkProductCoffe, DrinkProductTea, DrinkProductWatter));
-
+        
+        // System.out.println(addProduct);
+        
         HotDrinksMachine vendingproduct = new HotDrinksMachine(addProduct);
         vendingproduct.addProducts(addProduct);
+        System.out.println();
         vendingproduct.SearchName("Coffe");
         vendingproduct.SearchVolume(0.9);
         vendingproduct.SearchTemperature(120);
-
+        System.out.println();
         HotDrinks hotDrinks = new HotDrinks(null, null, null);
         hotDrinks.setName("Cocola");
         hotDrinks.setVolume(0.5);
         hotDrinks.setCost(9.99);
         System.out.println(hotDrinks);
-
+        System.out.println();
         TempDrinks tempDrinks = new TempDrinks(null, null, null, 0);
         tempDrinks.setName("Hot Tea");
         tempDrinks.setVolume(0.8);
