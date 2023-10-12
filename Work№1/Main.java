@@ -15,14 +15,18 @@ public class Main
         // HotDrinksMachine DrinkProductCoffe = new HotDrinksMachine("Coffe", 0.4, 96, 89.99);
         // HotDrinksMachine DrinkProductTea = new HotDrinksMachine("Tea", 0.5, 120, 34.99);
         // HotDrinksMachine DrinkProductWatter = new HotDrinksMachine("Watter", 0.9, 0, 59.99);
-        
-        // List<OldHotDrinksMachine> addProduct = new ArrayList<>(List.of(DrinkProductCoffe, DrinkProductTea, DrinkProductWatter));
 
-        // VendingMachine vendingproduct = new VendingMachine();
-        // vendingproduct.getProducts(addProduct);
-        // vendingproduct.SearchName("Coffe");
-        // vendingproduct.SearchVolume(0.9);
-        // vendingproduct.SearchTemperature(120);
+        TempDrinks DrinkProductCoffe = new TempDrinks("Coffe", 0.4, 89.99, 96);
+        TempDrinks DrinkProductTea = new TempDrinks("Tea", 0.5, 34.99, 120);
+        TempDrinks DrinkProductWatter = new TempDrinks("Watter", 0.9, 59.99, 0);
+        
+        List<HotDrinks> addProduct = new ArrayList<>(List.of(DrinkProductCoffe, DrinkProductTea, DrinkProductWatter));
+
+        HotDrinksMachine vendingproduct = new HotDrinksMachine(addProduct);
+        vendingproduct.addProducts(addProduct);
+        vendingproduct.SearchName("Coffe");
+        vendingproduct.SearchVolume(0.9);
+        vendingproduct.SearchTemperature(120);
 
         HotDrinks hotDrinks = new HotDrinks(null, null, null);
         hotDrinks.setName("Cocola");
