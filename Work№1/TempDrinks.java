@@ -1,6 +1,6 @@
 public class TempDrinks extends HotDrinks
 {
-    protected int temperature;
+    private int temperature;
 
     public int getTemperature() 
     {

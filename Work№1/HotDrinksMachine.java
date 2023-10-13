@@ -3,7 +3,7 @@ import java.util.List;
 
 public class HotDrinksMachine implements VendingMachine
 {
-    protected List<TempDrinks> addproduct = new ArrayList<>();
+    private List<TempDrinks> addproduct = new ArrayList<>();
 
     @Override
     public void addProducts (List<TempDrinks> newProduct)
