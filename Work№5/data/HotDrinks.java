@@ -2,7 +2,7 @@ package data;
 
 public class HotDrinks extends Drinks
 {
-    private int temperature;
+    protected int temperature;
 
     public HotDrinks(String name, Double volume, Double cost, int temperature) 
     {
@@ -22,4 +22,11 @@ public class HotDrinks extends Drinks
         this.temperature = temperature;
 
     }
+
+    @Override
+    public String toString() 
+    {
+        return "Selected drink: " + name + ", Volume: " + volume + ", Temperature - " + temperature + " C, Cost - " + cost + "$";
+
+    }    
 }

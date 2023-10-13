@@ -13,7 +13,7 @@ public abstract class Drinks
         this.cost = cost;
 
     }
-    
+
     public String getName() 
     {
         return name;
