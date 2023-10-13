@@ -6,10 +6,9 @@ public class HotDrinksMachine implements VendingMachine
     private List<TempDrinks> addproduct = new ArrayList<>();
 
     @Override
-    public void addProducts (List<TempDrinks> newProduct)
+    public void getProducts (List<TempDrinks> newProduct)
     {
         this.addproduct = newProduct;
-        System.out.println(addproduct);
 
     }
 

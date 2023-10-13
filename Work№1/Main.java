@@ -21,7 +21,7 @@ public class Main
         // System.out.println(addProduct);
         
         HotDrinksMachine vendingproduct = new HotDrinksMachine(addProduct);
-        vendingproduct.addProducts(addProduct);
+        vendingproduct.getProducts(addProduct);
         System.out.println();
         vendingproduct.SearchName("Coffe");
         vendingproduct.SearchVolume(0.9);
