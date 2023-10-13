@@ -4,24 +4,42 @@ package controller;
 import java.util.ArrayList;
 import java.util.List;
 import data.HotDrinks;
-import service.HotDrinksMachine;
+import service.VendingMachine;
 
 public class ConrollerMachine
 {
     private List<HotDrinks> hotDrinksList = new ArrayList<>();
     private view.View view;
-    private HotDrinksMachine hotDrinksMachine;
+    private VendingMachine vendingMachine;
     
-    public ConrollerMachine(view.View view, HotDrinksMachine hotDrinksMachine) 
+
+    public ConrollerMachine(view.View view, VendingMachine vendingMachine) 
     {
         this.view = view;
-        this.hotDrinksMachine = hotDrinksMachine;
+        this.vendingMachine = vendingMachine;
     }
 
-    public void getProduct (List<HotDrinks> newProduct)
+    public void getProduct(List<HotDrinks> newProduct)
     {
-        this.hotDrinksList = newProduct;
-        System.out.println(hotDrinksList);
+        vendingMachine.getProduct(newProduct);
+
+    }
+
+    public void SearchName(String name)
+    {
+        vendingMachine.SearchName(name);
+
+    }
+
+    public void SearchVolume(Double volume)
+    {
+        vendingMachine.SearchVolume(volume);
+
+    }
+
+    public void SearchTemperature(int temperature)
+    {
+        vendingMachine.SearchTemperature(temperature);
 
     }
 
@@ -30,6 +48,5 @@ public class ConrollerMachine
         view.viewDrinksList(hotDrinksList);
 
     }
-
 }
 

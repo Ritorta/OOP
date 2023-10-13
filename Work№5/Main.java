@@ -24,26 +24,27 @@ public class Main
 {
     public static void main(String[] args)
     {
-        HotDrinks DrinkProductCoffe = new HotDrinks("Coffe", 0.4, 89.99, 96);
-        HotDrinks DrinkProductTea = new HotDrinks("Tea", 0.5, 34.99, 120);
-        HotDrinks DrinkProductWatter = new HotDrinks("Watter", 0.9, 59.99, 0);
+        // HotDrinks DrinkProductCoffe = new HotDrinks("Coffe", 0.4, 89.99, 96);
+        // HotDrinks DrinkProductTea = new HotDrinks("Tea", 0.5, 34.99, 120);
+        // HotDrinks DrinkProductWatter = new HotDrinks("Watter", 0.9, 59.99, 0);
 
-        List<HotDrinks> addProduct = new ArrayList<>(List.of(DrinkProductCoffe, DrinkProductTea, DrinkProductWatter));
-    
+        // List<HotDrinks> addProduct = new ArrayList<>(List.of(DrinkProductCoffe, DrinkProductTea, DrinkProductWatter));
+        
+        // view.viewDrinksList(addProduct);
 
         
 
 
         View view = new View();
-        HotDrinksMachine hotDrinksMachine = new HotDrinksMachine();
-        ConrollerMachine controller = new ConrollerMachine(view, hotDrinksMachine);
-        controller.getProduct(addProduct);
-        // controller.SearchName("Coffe");
-        // controller.SearchVolume(0.9);
-        // controller.SearchTemperature(120);
-        // controller.View();
+        HotDrinksMachine Machine = new HotDrinksMachine();
+        ConrollerMachine controller = new ConrollerMachine(view, Machine);
+        controller.getProduct();
+        controller.SearchName("Coffe");
+        controller.SearchVolume(0.9);
+        controller.SearchTemperature(120);
+        controller.View();
 
-        // view.viewDrinksList(addProduct);
+        
 
         
     }
