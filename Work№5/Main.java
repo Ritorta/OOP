@@ -37,11 +37,11 @@ public class Main
         View view = new View();
         HotDrinksMachine hotDrinksMachine = new HotDrinksMachine();
         ConrollerMachine controller = new ConrollerMachine(view, hotDrinksMachine);
-        hotDrinksMachine.getProduct(addProduct);
-        hotDrinksMachine.SearchName("Coffe");
-        hotDrinksMachine.SearchVolume(0.9);
-        hotDrinksMachine.SearchTemperature(120);
-        controller.View();
+        controller.getProduct(addProduct);
+        // controller.SearchName("Coffe");
+        // controller.SearchVolume(0.9);
+        // controller.SearchTemperature(120);
+        // controller.View();
 
         // view.viewDrinksList(addProduct);
 

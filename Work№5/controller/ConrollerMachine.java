@@ -18,7 +18,12 @@ public class ConrollerMachine
         this.hotDrinksMachine = hotDrinksMachine;
     }
 
-    
+    public void getProduct (List<HotDrinks> newProduct)
+    {
+        this.hotDrinksList = newProduct;
+        System.out.println(hotDrinksList);
+
+    }
 
     public void View() 
     {
