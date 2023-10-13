@@ -8,6 +8,8 @@ import data.HotDrinks;
 public class HotDrinksMachine implements VendingMachine
 {
     private List<HotDrinks> hotDrinksList = new ArrayList<>();
+
+    
     
     public HotDrinksMachine(List<HotDrinks> hotDrinksList) 
     {
@@ -16,9 +18,17 @@ public class HotDrinksMachine implements VendingMachine
     }
 
     @Override
-    public void addProductsHot (List<HotDrinks> newProduct)
+    public void getProduct (List<HotDrinks> addProduct)
     {
-        this.hotDrinksList = newProduct;
+        // HotDrinks DrinkProductCoffe = new HotDrinks("Coffe", 0.4, 89.99, 96);
+        // HotDrinks DrinkProductTea = new HotDrinks("Tea", 0.5, 34.99, 120);
+        // HotDrinks DrinkProductCocao = new HotDrinks("Cocao", 0.9, 59.99, 80);
+
+        // addProduct.add(0, DrinkProductCoffe);
+        // addProduct.add(1, DrinkProductTea);
+        // addProduct.add(2, DrinkProductCocao);
+
+        this.hotDrinksList = addProduct;
         System.out.println(hotDrinksList);
 
     }
@@ -61,4 +71,8 @@ public class HotDrinksMachine implements VendingMachine
         }
         
     }
+
+   
+
+    
 }

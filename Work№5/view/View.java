@@ -9,8 +9,7 @@ public class View
 {
     public void viewDrinks(HotDrinks hotDrinks)
     {
-        // System.out.println("Selected drink: " + hotDrinks.getName() + ", Volume: " + hotDrinks.getVolume() + ", Temperature - " + hotDrinks.getTemperature + " C, Cost - " + hotDrinks.getCost() + "$");
-        System.out.println("Selected drink: " + hotDrinks.getName() + ", Volume: " + hotDrinks.getVolume() + ", Cost - " + hotDrinks.getCost() + "$");
+       System.out.println("Selected drink: " + hotDrinks.getName() + ", Volume: " + hotDrinks.getVolume() + ", Temperature - " + hotDrinks.getTemperature() + " C, Cost - " + hotDrinks.getCost() + "$");
 
     }
 
@@ -22,6 +21,4 @@ public class View
             System.out.println();
         }
     }
-
-
 }
