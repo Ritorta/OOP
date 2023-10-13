@@ -24,23 +24,23 @@ public class Main
 {
     public static void main(String[] args)
     {
-        // Drinks drink = new HotDrinks("Cofe", 0.4, 4.99, 90);
-
         HotDrinks DrinkProductCoffe = new HotDrinks("Coffe", 0.4, 89.99, 96);
         HotDrinks DrinkProductTea = new HotDrinks("Tea", 0.5, 34.99, 120);
         HotDrinks DrinkProductWatter = new HotDrinks("Watter", 0.9, 59.99, 0);
 
         List<HotDrinks> addProduct = new ArrayList<>(List.of(DrinkProductCoffe, DrinkProductTea, DrinkProductWatter));
-        
-        
+    
 
-        // System.out.println(drink);
+        
 
 
         View view = new View();
-        HotDrinksMachine hotDrinksMachine = new HotDrinksMachine(addProduct);
+        HotDrinksMachine hotDrinksMachine = new HotDrinksMachine();
         ConrollerMachine controller = new ConrollerMachine(view, hotDrinksMachine);
-
+        hotDrinksMachine.getProduct(addProduct);
+        hotDrinksMachine.SearchName("Coffe");
+        hotDrinksMachine.SearchVolume(0.9);
+        hotDrinksMachine.SearchTemperature(120);
         controller.View();
 
         // view.viewDrinksList(addProduct);

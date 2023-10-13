@@ -3,14 +3,12 @@ package controller;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.swing.text.View;
-
 import data.HotDrinks;
 import service.HotDrinksMachine;
 
 public class ConrollerMachine
 {
+    private List<HotDrinks> hotDrinksList = new ArrayList<>();
     private view.View view;
     private HotDrinksMachine hotDrinksMachine;
     
@@ -20,24 +18,12 @@ public class ConrollerMachine
         this.hotDrinksMachine = hotDrinksMachine;
     }
 
-    HotDrinks hotDrinks = new HotDrinks(null, null, null, 0);
-
     
 
-  //  List<HotDrinks> addProduct = new ArrayList<>(List.of(DrinkProductCoffe, DrinkProductTea, DrinkProductWatter));
-
-    
-
-
-
-    public void addProductsHot(String name, Double volume, Double cost, int temperature)
+    public void View() 
     {
-        hotDrinks.setName(name);
-        hotDrinks.setVolume(volume);
-        hotDrinks.setTemperature(temperature);
-        hotDrinks.setCost(cost);
-        
-        
+        view.viewDrinksList(hotDrinksList);
+
     }
 
 }
