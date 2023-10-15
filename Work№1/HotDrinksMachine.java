@@ -9,6 +9,7 @@ public class HotDrinksMachine implements VendingMachine
     public void getProducts (List<TempDrinks> newProduct)
     {
         this.addproduct = newProduct;
+        System.out.println(newProduct);
 
     }
 
