@@ -17,8 +17,8 @@ public class HotDrinksMachine implements VendingMachine
     public void getProduct (List<HotDrinks> newProduct)
     {
         this.hotDrinksList = newProduct;
-        System.out.println(hotDrinksList);
-
+        System.out.println(newProduct);
+        
     }
 
     @Override
