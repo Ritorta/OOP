@@ -8,16 +8,26 @@ import data.HotDrinks;
 public class HotDrinksMachine implements VendingMachine
 {
     HotDrinks DrinkProductCoffe = new HotDrinks("Coffe", 0.4, 89.99, 96);
-    HotDrinks DrinkProductTea = new HotDrinks("Tea", 0.5, 34.99, 120);
+    HotDrinks DrinkProductTea = new HotDrinks("Tea", 0.5, 34.99, 100);
     HotDrinks DrinkProductWatter = new HotDrinks("Watter", 0.9, 59.99, 0);
+    HotDrinks DrinkProductCocao = new HotDrinks("Cocao", 0.6, 55.00, 90);
+    HotDrinks DrinkProductGreenTea = new HotDrinks("GreenTea", 0.5, 14.99, 120);
+    HotDrinks DrinkProductMilkShake = new HotDrinks("MilkShake", 1.0, 49.23, 0);
     
-    private List<HotDrinks> hotDrinksList = new ArrayList<>(List.of(DrinkProductCoffe, DrinkProductTea, DrinkProductWatter));
+    
+    private List<HotDrinks> hotDrinksList = new ArrayList<>(List.of(DrinkProductCoffe, DrinkProductTea, DrinkProductWatter, 
+    DrinkProductCocao, DrinkProductGreenTea, DrinkProductMilkShake));
+
+    public List<HotDrinks> getProducts() 
+    {
+        return new ArrayList<>(hotDrinksList);
+        
+    }
 
     @Override
-    public void getProduct (List<HotDrinks> newProduct)
+    public void setProducts(List<HotDrinks> newProduct) 
     {
         this.hotDrinksList = newProduct;
-        System.out.println(newProduct);
         
     }
 

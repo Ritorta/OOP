@@ -1,10 +1,8 @@
 package controller;
 
 
-import java.util.ArrayList;
 import java.util.List;
 import data.HotDrinks;
-
 import service.VendingMachine;
 
 public class ConrollerMachine
@@ -12,19 +10,20 @@ public class ConrollerMachine
     private List<HotDrinks> hotDrinksList;
     private view.View view;
     private VendingMachine vendingMachine;
-    
 
     public ConrollerMachine(view.View view, VendingMachine vendingMachine) 
     {
         this.view = view;
         this.vendingMachine = vendingMachine;
-        this.hotDrinksList = new ArrayList<>();
+        this.hotDrinksList = vendingMachine.getProducts();
+        
     }
 
-    public void getProduct(List<HotDrinks> newProduct)
+    public void getProducts(List<HotDrinks> newProduct) 
     {
-        hotDrinksList = newProduct;
-        vendingMachine.getProduct(newProduct);
+        this.hotDrinksList = newProduct;
+        vendingMachine.setProducts(newProduct);
+        System.out.println(newProduct);
         
     }
 
@@ -50,8 +49,6 @@ public class ConrollerMachine
     {
         view.viewDrinksList(hotDrinksList);
 
-    }
-
-    
+    }   
 }
 
