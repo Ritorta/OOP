@@ -23,9 +23,9 @@ public class ConrollerMachine
 
     public void getProduct(List<HotDrinks> newProduct)
     {
-        vendingMachine.getProduct(newProduct);
         hotDrinksList = newProduct;
-
+        vendingMachine.getProduct(newProduct);
+        
     }
 
     public void SearchName(String name)
