@@ -1,21 +1,33 @@
 package data;
 
-public class Student
+public class Student extends User
 {
-    private String name;
+    private Long studentId;
+    
 
-    public Student(String name) 
+    public Student(String firstName, String secondName, String patronymic, Long studentId) 
     {
-        this.name = name;
+        super(firstName, secondName, patronymic);
+        this.studentId = studentId;
     }
 
-    public String getName() {
-        return name;
+
+    public Long getStudentId() {
+        return studentId;
     }
 
-    public void setName(String name) {
-        this.name = name;
+
+    public void setStudentId(Long studentId) {
+        this.studentId = studentId;
     }
+
+
+    @Override
+    public String toString() {
+        return "User [firstName=" + firstName + ", secondName=" + secondName + ", patronymic=" + patronymic + "studentId=" + studentId + "]";
+    }
+
+    
 
     
 }

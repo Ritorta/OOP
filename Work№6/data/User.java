@@ -8,9 +8,9 @@ public class User
      * @param secondName - Фамилия пользователя
      * @param patronymic - Отчество пользователя
     */
-    private String firstName;
-    private String secondName;
-    private String patronymic;
+    protected String firstName;
+    protected String secondName;
+    protected String patronymic;
     
     // Создание конструктора
     public User(String firstName, String secondName, String patronymic)

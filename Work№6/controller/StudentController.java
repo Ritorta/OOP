@@ -11,7 +11,7 @@ import data.Student;
 import data.User;
 
 
-class StudentController<T extends User> {
+public class StudentController<T extends User> {
      private List<StudentGroup<T>> groups;
    private UserView<T> userView;
 
