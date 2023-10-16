@@ -5,6 +5,7 @@ import java.util.Comparator;
 // Создаём типизированный Comparator, наследующегося от типа User.
 class UserComparator<T extends User> implements Comparator<T> 
 {
+    // Объявление типизированных имен аргументов.
     @Override
     public int compare(T User1, T User2) 
     {
