@@ -11,9 +11,9 @@ public interface UserView<T extends User>
 {
     // Установление полей для класса UserView.
     /**
-     * @param sendOnConsole - .
-     * @param sendOnConsoleUserGroup - .
-     * @param sendOnConsoleListStudent - .
+     * @param sendOnConsole - Вывод информации по конкретному студенту из группы студентов..
+     * @param sendOnConsoleUserGroup - Вывод конкретной группы студентов.
+     * @param sendOnConsoleListStudent - Вывод списка студентов.
      */
     void sendOnConsole(List<StudentGroup<T>> groups);
     void sendOnConsoleUserGroup(StudentGroup<T> studentGroup);
