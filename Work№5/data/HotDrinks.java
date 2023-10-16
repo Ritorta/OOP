@@ -20,12 +20,16 @@ public class HotDrinks extends Drinks
     }
 
 
-    public int getTemperature() {
+    public int getTemperature() 
+    {
         return temperature;
+        
     }
 
 
-    public void setTemperature(int temperature) {
+    public void setTemperature(int temperature) 
+    {
         this.temperature = temperature;
+
     }    
 }

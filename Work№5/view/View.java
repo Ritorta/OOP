@@ -9,7 +9,7 @@ public class View
 {
     public void viewDrinks(HotDrinks hotDrinks)
     {
-       System.out.println("Selected drink: " + hotDrinks.getName() + ", Volume: " + hotDrinks.getVolume() + ", Temperature - " + hotDrinks.getTemperature() + " C, Cost - " + hotDrinks.getCost() + "$");
+       System.out.println("List drink: " + hotDrinks.getName() + ", Volume: " + hotDrinks.getVolume() + ", Temperature - " + hotDrinks.getTemperature() + " C, Cost - " + hotDrinks.getCost() + "$");
 
     }
 
@@ -17,8 +17,9 @@ public class View
     {
         for(HotDrinks drinks : drinksView)
         {
+            System.out.print("    \s");
             viewDrinks(drinks);
-            System.out.println();
+            
         }
         
     }
