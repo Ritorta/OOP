@@ -1,8 +1,8 @@
+// Путь упаковки файлов.
 package data;
-
+// Импорт готового метода.
 import java.util.ArrayList;
 import java.util.List;
-
 //Создание типизированого класса StudetnGroup, наследующегося от типа User.
 public class StudentGroup<T extends User> 
 {

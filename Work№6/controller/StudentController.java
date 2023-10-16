@@ -1,13 +1,11 @@
 package controller;
 
-import view.UserView;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import data.StudentGroup;
 import data.User;
-
+import view.UserView;
 
 public class StudentController<T extends User> 
 {

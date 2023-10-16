@@ -1,3 +1,4 @@
+// Путь упаковки файлов.
 package data;
 // Создаём Student, наследующегося от типа User.
 public class Student extends User

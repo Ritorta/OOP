@@ -1,3 +1,4 @@
+// Путь упаковки файлов.
 package data;
 // Создание класса User. 
 public class User 
