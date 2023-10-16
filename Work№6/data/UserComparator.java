@@ -2,7 +2,7 @@
 package data;
 // Импорт готового метода.
 import java.util.Comparator;
-// Создаём типизированный Comparator, наследующегося от типа User.
+// Создаём типизированный UserComparator, который реализует Comparator от типа User.
 class UserComparator<T extends User> implements Comparator<T> 
 {
     // Объявление типизированных имен аргументов.

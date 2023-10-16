@@ -1,12 +1,13 @@
+// Путь упаковки файлов.
 package view;
-
+// Импорт готового метода.
 import java.util.List;
 import java.util.logging.Logger;
-
+// Импорт класса.
 import data.Student;
 import data.StudentGroup;
 import data.User;
-
+// Создаём типизированный StudentView, который реализует UserView от типа User.
 public class StudentView implements UserView<User> 
 {
 
