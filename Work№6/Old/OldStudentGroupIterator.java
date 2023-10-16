@@ -1,14 +1,14 @@
-package data;
+package Old;
 
 import java.util.Iterator;
 import java.util.List;
 
-public class StudentGroupIterator implements Iterator<Student> {
+public class OldStudentGroupIterator implements Iterator<OldStudent> {
 
     private int counter;
-    private final List<Student> students;
+    private final List<OldStudent> students;
 
-    public StudentGroupIterator(StudentGroup studentGroup) {
+    public OldStudentGroupIterator(OldStudentGroup studentGroup) {
         this.students = studentGroup.getStudents();
         this.counter = 0;
     }
@@ -19,7 +19,7 @@ public class StudentGroupIterator implements Iterator<Student> {
     }
 
     @Override
-    public Student next() {
+    public OldStudent next() {
         if (!hasNext()){
             return null;
         }

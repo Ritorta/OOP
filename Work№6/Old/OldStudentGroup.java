@@ -1,15 +1,12 @@
-package data;
+package Old;
 
 import java.util.List;
 
-import Old.OldStudent;
-import Old.OldTeacher;
-
-public class StudentGroup<T extends User>{
+public class OldStudentGroup implements Iterable<OldStudent>{
     private List<OldStudent> students;
     private OldTeacher teacher;
 
-    public StudentGroup(OldTeacher teacher, List<OldStudent> students) {
+    public OldStudentGroup(OldTeacher teacher, List<OldStudent> students) {
         this.students = students;
         this.teacher = teacher;
     }
@@ -38,5 +35,8 @@ public class StudentGroup<T extends User>{
                '}';
     }
 
- 
+    @Override
+    public OldStudentGroupIterator iterator() {
+        return new OldStudentGroupIterator(this);
+    }
 }

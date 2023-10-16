@@ -1,31 +1,31 @@
 package service;
 
-import data.StudentGroup;
-import data.Teacher;
-import data.Student;
-import data.StudentComparator;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-public class StudentGroupService {
-    private StudentGroup studentGroup;
+import Old.OldStudent;
+import Old.OldStudentComparator;
+import Old.OldStudentGroup;
+import Old.OldTeacher;
 
-    public void createStudentGroup(Teacher teacher, List<Student> students) {
-        this.studentGroup = new StudentGroup(teacher, students);
+public class StudentGroupService {
+    private OldStudentGroup studentGroup;
+
+    public void createStudentGroup(OldTeacher teacher, List<OldStudent> students) {
+        this.studentGroup = new OldStudentGroup(teacher, students);
     }
 
-    public StudentGroup getStudentGroup() {
+    public OldStudentGroup getStudentGroup() {
         return studentGroup;
     }
 
-    public Student getStudentFromStudentGroup(String firstName, String secondName){
-        Iterator<Student> iterator = studentGroup.iterator();
-        List<Student> result = new ArrayList<>();
+    public OldStudent getStudentFromStudentGroup(String firstName, String secondName){
+        Iterator<OldStudent> iterator = studentGroup.iterator();
+        List<OldStudent> result = new ArrayList<>();
         while (iterator.hasNext()){
-            Student student = iterator.next();
+            OldStudent student = iterator.next();
             if(student.getFirstName().equalsIgnoreCase(firstName)
                && student.getSecondName().equalsIgnoreCase(secondName)){
                 result.add(student);
@@ -42,15 +42,15 @@ public class StudentGroupService {
         return result.get(0);
     }
 
-    public List<Student> getSortedStudentGroup(){
-        List<Student> students = new ArrayList<>(studentGroup.getStudents());
+    public List<OldStudent> getSortedStudentGroup(){
+        List<OldStudent> students = new ArrayList<>(studentGroup.getStudents());
         Collections.sort(students);
         return students;
     }
 
-    public List<Student> getSortedByFIOStudentGroup(){
-        List<Student> students = new ArrayList<>(studentGroup.getStudents());
-        students.sort(new StudentComparator());
+    public List<OldStudent> getSortedByFIOStudentGroup(){
+        List<OldStudent> students = new ArrayList<>(studentGroup.getStudents());
+        students.sort(new OldStudentComparator());
         return students;
     }
 }

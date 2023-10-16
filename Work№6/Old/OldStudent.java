@@ -1,15 +1,15 @@
-package data;
+package Old;
 
 import java.time.LocalDate;
 
-public class Student extends User implements Comparable<Student>{
+public class OldStudent extends OldUser implements Comparable<OldStudent>{
     private Long studentId;
 
-    public Student(String firstName, String secondName, String patronymic, LocalDate dateOfBirth) {
+    public OldStudent(String firstName, String secondName, String patronymic, LocalDate dateOfBirth) {
         super(firstName, secondName, patronymic, dateOfBirth);
     }
 
-    public Student(String firstName, String secondName, String patronymic, LocalDate dateOfBirth, Long studentId) {
+    public OldStudent(String firstName, String secondName, String patronymic, LocalDate dateOfBirth, Long studentId) {
         super(firstName, secondName, patronymic, dateOfBirth);
         this.studentId = studentId;
     }
@@ -34,7 +34,7 @@ public class Student extends User implements Comparable<Student>{
     }
 
     @Override
-    public int compareTo(Student o) {
+    public int compareTo(OldStudent o) {
         return this.studentId.compareTo(o.studentId);
     }
 }

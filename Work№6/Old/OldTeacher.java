@@ -1,13 +1,13 @@
-package data;
+package Old;
 
 import java.time.LocalDate;
 import java.util.Comparator;
 
-public class Teacher extends User{
+public class OldTeacher extends OldUser{
 
     private Long teacherId;
 
-    public Teacher(String firstName, String secondName, String patronymic, LocalDate dateOfBirth) {
+    public OldTeacher(String firstName, String secondName, String patronymic, LocalDate dateOfBirth) {
         super(firstName, secondName, patronymic, dateOfBirth);
     }
 

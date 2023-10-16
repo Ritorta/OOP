@@ -1,10 +1,10 @@
-package data;
+package Old;
 
 import java.util.Comparator;
 
-public class StudentComparator implements Comparator<Student> {
+public class OldStudentComparator implements Comparator<OldStudent> {
     @Override
-    public int compare(Student o1, Student o2) {
+    public int compare(OldStudent o1, OldStudent o2) {
         int resultOfComparing = o1.getSecondName().compareTo(o2.getSecondName());
         if (resultOfComparing == 0) {
             resultOfComparing = o1.getFirstName().compareTo(o2.getFirstName());

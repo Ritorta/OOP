@@ -1,16 +1,22 @@
+// Work №6, Урок 6. ООП Дизайн и Solid
 
-import data.User;
-import data.StudentGroup;
+// Взять реализованный код в рамках семинара 4 и продемонстрировать применение принципов, 
+// усвоенных на семинаре. Нужно в проекте прокомментировать участки кода, 
+// которые рефакторим, какой принцип применяем и почему.
+
 import controller.UserController;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.TreeSet;
 
+import Old.OldStudentGroup;
+import Old.OldUser;
+
 public class Main {
     public static void main(String[] args) {
 
-        ArrayList<User> list1 = new ArrayList<>();
+        ArrayList<OldUser> list1 = new ArrayList<>();
         StudentGroup<User> group1 = new StudentGroup("Group1", list1);
 
         User student1 = new User("George", "Washington", "Alexandrovich");

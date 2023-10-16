@@ -1,36 +1,36 @@
 package service;
 
-import data.User;
-import data.Student;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import Old.OldStudent;
+import Old.OldUser;
+
 public class DataService {
 
-    private List<User> users;
+    private List<OldUser> users;
 
     public DataService() {
         this.users = new ArrayList<>();
     }
 
-    public List<User> getAll(){
+    public List<OldUser> getAll(){
         return this.users;
     }
 
     public void create(String firstName, String secondName, String patronymic, LocalDate dateOfBirth) {
         Long countMaxId = 0L;
-        for (User user: this.users){
-            if(user instanceof Student){
-                if (((Student) user).getStudentId() > countMaxId){
-                    countMaxId = ((Student) user).getStudentId();
+        for (OldUser user: this.users){
+            if(user instanceof OldStudent){
+                if (((OldStudent) user).getStudentId() > countMaxId){
+                    countMaxId = ((OldStudent) user).getStudentId();
                 }
             }
         }
         countMaxId++;
 
-        Student student = new Student(firstName, secondName, patronymic, dateOfBirth, countMaxId);
+        OldStudent student = new OldStudent(firstName, secondName, patronymic, dateOfBirth, countMaxId);
         this.users.add(student);
     }
 }
