@@ -1,16 +1,16 @@
-package service;
+package Old.service;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-import Old.OldStudent;
-import Old.OldStudentComparator;
-import Old.OldStudentGroup;
-import Old.OldTeacher;
+import Old.data.OldStudent;
+import Old.data.OldStudentComparator;
+import Old.data.OldStudentGroup;
+import Old.data.OldTeacher;
 
-public class StudentGroupService {
+public class OldStudentGroupService {
     private OldStudentGroup studentGroup;
 
     public void createStudentGroup(OldTeacher teacher, List<OldStudent> students) {

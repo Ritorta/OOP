@@ -4,14 +4,12 @@
 // усвоенных на семинаре. Нужно в проекте прокомментировать участки кода, 
 // которые рефакторим, какой принцип применяем и почему.
 
-import controller.UserController;
+
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.TreeSet;
 
-import Old.OldStudentGroup;
-import Old.OldUser;
+import Old.data.OldUser;
 
 public class Main {
     public static void main(String[] args) {

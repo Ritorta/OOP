@@ -1,42 +1,61 @@
 package data;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import Old.OldStudent;
-import Old.OldTeacher;
+//Создание типизированого класса StudetnGroup.
+public class StudentGroup<T extends User> 
+{
+    // Определение параметров.
+    private String groupName;
+    private List<T> students;
 
-public class StudentGroup<T extends User>{
-    private List<OldStudent> students;
-    private OldTeacher teacher;
+    // Создание конструктора.
+    public StudentGroup(String groupName) 
+    {
+        this.groupName = groupName;
+        this.students = new ArrayList<>();
 
-    public StudentGroup(OldTeacher teacher, List<OldStudent> students) {
-        this.students = students;
-        this.teacher = teacher;
     }
 
-    public List<OldStudent> getStudents() {
+    // Определение Geters and Seters.
+    public String getGroupName() 
+    {
+        return groupName;
+    }
+
+
+
+    public void setGroupName(String groupName) 
+    {
+        this.groupName = groupName;
+    }
+
+
+
+    public List<T> getStudents() 
+    {
         return students;
+
     }
 
-    public void setStudents(List<OldStudent> students) {
+
+
+    public void setStudents(List<T> students) 
+    {
         this.students = students;
+
     }
 
-    public OldTeacher getTeacher() {
-        return teacher;
+    public void addStudent(T student) 
+    {
+        students.add(student);
+
     }
 
-    public void setTeacher(OldTeacher teacher) {
-        this.teacher = teacher;
-    }
+    public void removeStudent(T student) 
+    {
+        students.remove(student);
 
-    @Override
-    public String toString() {
-        return "StudentGroup{" +
-               "students=" + students +
-               ", teacher=" + teacher +
-               '}';
     }
-
- 
 }

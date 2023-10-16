@@ -1,34 +1,14 @@
 package view;
 
 import java.util.List;
-import java.util.logging.Logger;
 
-import Old.OldStudent;
-import Old.OldStudentGroup;
-import Old.OldUser;
+import data.User;
+import data.StudentGroup;
+import data.Student;
 
-public class UserView 
+public interface UserView<T extends User> 
 {
-
-    Logger logger = Logger.getLogger(UserView.class.getName());
-
-    public void sendOnConsole(List<OldUser> userList)
-    {
-        for(OldUser user: userList){
-            logger.info(user.toString());
-        }
-
-    }
-
-    public void sendOnConsoleUserGroup(OldStudentGroup studentGroup)
-    {
-        logger.info(studentGroup.toString());
-
-    }
-
-    public void sendOnConsoleListStudent(List<OldStudent> students)
-    {
-        logger.info(students.toString());
-
-    }
+    void sendOnConsole(List<StudentGroup<T>> groups);
+    void sendOnConsoleUserGroup(StudentGroup<T> studentGroup);
+    void sendOnConsoleListStudent(List<Student> students);
 }

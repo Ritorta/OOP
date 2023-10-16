@@ -1,17 +1,17 @@
-package service;
+package Old.service;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import Old.OldStudent;
-import Old.OldUser;
+import Old.data.OldStudent;
+import Old.data.OldUser;
 
-public class DataService {
+public class OldDataService {
 
     private List<OldUser> users;
 
-    public DataService() {
+    public OldDataService() {
         this.users = new ArrayList<>();
     }
 
