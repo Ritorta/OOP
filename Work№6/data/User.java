@@ -2,7 +2,7 @@ package data;
 // Создание класса User. 
 public class User 
 {
-    // Установление полей для класса пользователь, все поля приватные поскольку нам не надо их изменять.
+    // Установление полей для класса User.
      /** 
      * @param firstName -  Имя пользователя
      * @param secondName - Фамилия пользователя
@@ -12,7 +12,7 @@ public class User
     protected String secondName;
     protected String patronymic;
     
-    // Создание конструктора
+    // Создание конструктора, который принимает значение полей класса User, внутри конструктора происходит инициализация полей для передачи значений объекта.
     public User(String firstName, String secondName, String patronymic)
     {
         this.firstName = firstName;
@@ -56,7 +56,7 @@ public class User
         this.patronymic = patronymic;
 
     }
-    // Создание консольной строки toString для вывода.
+    // Создание консольной строки toString для вывода в консоль.
     @Override
     public String toString() {
         return "User [firstName=" + firstName + ", secondName=" + secondName + ", patronymic=" + patronymic + "]";
