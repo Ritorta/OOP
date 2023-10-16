@@ -1,5 +1,10 @@
 package service;
 
+import data.StudentGroup;
+import data.Teacher;
+import data.Student;
+import data.StudentComparator;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
