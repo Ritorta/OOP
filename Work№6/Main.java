@@ -12,9 +12,14 @@ import view.StudentView;
 import controller.StudentController;
 // Создание класса Main. 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
+        // Программа была переписана под SOLID в виду того, что в изначальном варианте описывать то нечего было для Домашней работы, 
+        // по причине того, что на семинаре не был написал исходный код или был взят старый вместо этого мы работали в готовом преподавательском репозитории,
+        // где по факту описывать было нечего.
         // Создание StudentController для управления программой.
-        StudentController<User> studentController = new StudentController<>(new StudentView());
+        StudentView studentView = new StudentView();
+        StudentController<User> studentController = new StudentController<>(studentView);
 
         // Создание групп студентов.
         studentController.createGroup("Group 1");
@@ -30,8 +35,9 @@ public class Main {
         // Добавление групп студентов в другие группы.
         studentController.addStudentToGroup(group1, student1);
         studentController.addStudentToGroup(group2, student2);
-        // Вывод информации в консоль спомощью view
+        // Вывод информации в консоль спомощью view.
         studentController.sendGroupsOnConsole();
-
+        // Итог полное описание переписаной под SOLID программы, к сожалению идеально это реализовать у меня не получилось,
+        // буду очень рад хоть какому-то фитбеку в коментарии к домшнему заданию.
     }
 }
