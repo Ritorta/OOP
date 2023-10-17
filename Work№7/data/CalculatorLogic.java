@@ -43,13 +43,9 @@ public class CalculatorLogic implements Calculator
             System.out.println("Error: Division by zero, impossible!");
             return;
         }
-        double ValidDef = (num1.getNumberValid() * num2.getNumberValid() + num1.getNumberImaginary() * num2.getNumberImaginary()) / denominator;
-        double ImaginaryDef = (num1.getNumberImaginary() * num2.getNumberValid() - num1.getNumberValid() * num2.getNumberImaginary()) / denominator;
-        System.out.println("Division complex numbers : " + ValidDef + " + " + ImaginaryDef);
+        double ValidDev = (num1.getNumberValid() * num2.getNumberValid() + num1.getNumberImaginary() * num2.getNumberImaginary()) / denominator;
+        double ImaginaryDev = (num1.getNumberImaginary() * num2.getNumberValid() - num1.getNumberValid() * num2.getNumberImaginary()) / denominator;
+        System.out.println("Division complex numbers : " + ValidDev + " + " + ImaginaryDev);
 
     }
-    
-
-    
-
 }
