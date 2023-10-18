@@ -11,8 +11,11 @@ public interface Calculator
  * @param num1 - Первое число метода NumbersOperation
  * @param num2 - Второе число метода NumbersOperation
  */
+
     void AdditionOperation(CalculatorComplexNumbers num1, CalculatorComplexNumbers num2);
     void SubtractionOperation(CalculatorComplexNumbers num1, CalculatorComplexNumbers num2);
     void MultiplicationOperation(CalculatorComplexNumbers num1, CalculatorComplexNumbers num2);
     void DivisionOperation(CalculatorComplexNumbers num1, CalculatorComplexNumbers num2);
+    void parseComplexNumber(String input);
+   
 }

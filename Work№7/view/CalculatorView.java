@@ -2,42 +2,59 @@ package view;
 
 import java.util.Scanner;
 
+import controller.CalculatorController;
+import data.CalculatorComplexNumbers;
 import data.CalculatorLogic;
 import service.CalculatorLoger;
 import service.CalculatorService;
 
 public class CalculatorView
 {
-    class View 
-    {
-        private CalculatorService calculatorService;
-        private CalculatorLogic calculatorLogic;
-        private CalculatorLoger calculatorLoger;
-
+        private CalculatorController calculatorController;
+        
         // Конструктор класса
-        public View() 
+        public CalculatorView(CalculatorController calculatorController) 
         {
-            calculatorService = new CalculatorService();
+            this.calculatorController = calculatorController; 
+    
         }
 
+  
+        public CalculatorView() {
+        }
+
+
         // Метод для отображения меню и выбора операции
-        public void showMenu() 
+        public void consoleMenu() 
         {
-            System.out.println("1. Сложение");
-            System.out.println("2. Вычитание");
-            System.out.println("3. Умножение");
-            System.out.println("4. Деление");
-            System.out.println("0. Выход");
+            System.out.println("1. Sum");
+            System.out.println("2. Subtraction");
+            System.out.println("3. Multiplication");
+            System.out.println("4. Division");
+            System.out.println("5. Выход");
         }
 
         // Метод для получения выбранной операции от пользователя
-        public int getOperationChoice() 
+        public String getInput() 
         {
-            System.out.print("Выберите операцию (0-4): ");
+            System.out.print("Select: ");
             Scanner scanner = new Scanner(System.in);
-            int choice = scanner.nextInt();
-            scanner.nextLine(); // Считываем символ новой строки после ввода числа
-            return choice;
+           // int choice = scanner.nextInt();
+            // Считываем символ новой строки после ввода числа
+           return scanner.nextLine(); 
+            //return choice;
         }
-    }
-}
+
+   
+        public void displayResult(String result) 
+        {
+            System.out.println("Result: " + result);
+        }
+        
+        public void displayResult(CalculatorComplexNumbers result) 
+        {
+            System.out.println("Result: " + result.toString());  // Используем toString()
+        
+        }
+    
+}    
