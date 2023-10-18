@@ -9,21 +9,21 @@ import java.io.IOException;
 import java.util.Formatter;
 import java.util.Scanner;
 
-public class Loger 
+public class CalculatorLoger 
 {    
     //Создание переменной и файла для чтения и записи.
-    File file = new File("Logs.txt");
+    File file = new File("CalculatorLogs.txt");
     FileWriter writer;
     BufferedReader reader;
 
-    public Loger() 
+    public CalculatorLoger() 
     {
         
     }
     // Создание метода "write", который принимает строковый аргумент "record". 
     public void write(String record) 
     {
-        // Внутри метода происходит попытка записать значение "record" в файл "Logs.txt". 
+        // Внутри метода происходит попытка записать значение "record" в файл "CalculatorLogs.txt". 
         try 
         {
             if (file.exists()) 
@@ -43,16 +43,16 @@ public class Loger
             throw new RuntimeException(e);
         }
     }
-    //Создание метода "erase", который очищает содержимое файла "Logs.txt".  
+    //Создание метода "erase", который очищает содержимое файла "CalculatorLogs.txt".  
     public void erase() 
     {
         // Создается новый объект Scanner для чтения файла.
-        Scanner scan = new Scanner("Logs.txt");
-        // Затем создается объект Formatter с файлом "Logs.txt", что позволяет записывать в него данные.
+        Scanner scan = new Scanner("CalculatorLogs.txt");
+        // Затем создается объект Formatter с файлом "CalculatorLogs.txt", что позволяет записывать в него данные.
         Formatter form = null;
         try 
         {
-            form = new Formatter("Logs.txt");
+            form = new Formatter("CalculatorLogs.txt");
         } 
         // Если возникает ошибка FileNotFoundException, то выбрасывается исключение RuntimeException.   
         catch (FileNotFoundException e) 
@@ -67,11 +67,11 @@ public class Loger
             scan.next();
         }
     }
-    // Создание метода "read", который считывает содержимое файла "Logs.txt" и возвращает его в виде строки.   
+    // Создание метода "read", который считывает содержимое файла "CalculatorLogs.txt" и возвращает его в виде строки.   
     public String read() 
     {
         String result = "";
-        // Создается объект BufferedReader с файлом "Logs.txt" для чтения данных.
+        // Создается объект BufferedReader с файлом "CalculatorLogs.txt" для чтения данных.
         try 
         {
             this.reader = new BufferedReader(new FileReader(file));
