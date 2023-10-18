@@ -11,8 +11,6 @@ public interface Calculator
  * @param num1 - Первое число метода NumbersOperation
  * @param num2 - Второе число метода NumbersOperation
  */
-    
-    //void NumbersOperation(CalculatorComplexNumbers num1, CalculatorComplexNumbers num2);
     void AdditionOperation(CalculatorComplexNumbers num1, CalculatorComplexNumbers num2);
     void SubtractionOperation(CalculatorComplexNumbers num1, CalculatorComplexNumbers num2);
     void MultiplicationOperation(CalculatorComplexNumbers num1, CalculatorComplexNumbers num2);
