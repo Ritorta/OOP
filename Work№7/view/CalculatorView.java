@@ -2,27 +2,21 @@ package view;
 
 import java.util.Scanner;
 
-import controller.CalculatorController;
 import data.CalculatorComplexNumbers;
-import data.CalculatorLogic;
-import service.CalculatorLoger;
-import service.CalculatorService;
-
 public class CalculatorView
 {
-        private CalculatorController calculatorController;
+      //  private CalculatorController calculatorController;
         
-        // Конструктор класса
-        public CalculatorView(CalculatorController calculatorController) 
-        {
-            this.calculatorController = calculatorController; 
+        // // Конструктор класса
+        // public CalculatorView(CalculatorController calculatorController) 
+        // {
+        //     this.calculatorController = calculatorController; 
     
-        }
+        // }
 
   
         public CalculatorView() {
         }
-
 
         // Метод для отображения меню и выбора операции
         public void consoleMenu() 
@@ -40,12 +34,11 @@ public class CalculatorView
             System.out.print("Select: ");
             Scanner scanner = new Scanner(System.in);
            // int choice = scanner.nextInt();
-            // Считываем символ новой строки после ввода числа
+           // Считываем символ новой строки после ввода числа
            return scanner.nextLine(); 
             //return choice;
         }
 
-   
         public void displayResult(String result) 
         {
             System.out.println("Result: " + result);
@@ -56,5 +49,4 @@ public class CalculatorView
             System.out.println("Result: " + result.toString());  // Используем toString()
         
         }
-    
 }    

@@ -31,7 +31,7 @@ public class CalculatorComplexNumbers
     @Override
     public String toString() 
     {
-        return numberValid + " + " + numberImaginary + "i";
-        
+    return numberValid + " + " + numberImaginary + "i";
+            
     }
 }

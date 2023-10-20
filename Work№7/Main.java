@@ -6,10 +6,6 @@
 // Примечание: Можно выбрать другой язык программирования, например C# или Python, если выбран язык, отличный от JAVA, 
 // но тогда необходимо написать документ, каким образом можно запустить приложение (что необходимо установить, каким образом запускать и т.п.).
 
-import java.lang.ModuleLayer.Controller;
-
-import javax.swing.text.View;
-
 import controller.CalculatorController;
 import data.Calculator;
 import data.CalculatorComplexNumbers;
@@ -24,21 +20,13 @@ class Main
     {
         CalculatorView view = new CalculatorView();
         Calculator calculator = new CalculatorLogic();
-        CalculatorService service = new CalculatorService();
         CalculatorLogic logic = new CalculatorLogic();
+        CalculatorService service = new CalculatorService(logic);
         CalculatorLoger loger = new CalculatorLoger();
-        CalculatorComplexNumbers num1 = new CalculatorComplexNumbers(1.0, 2.0);
-        CalculatorComplexNumbers num2 = new CalculatorComplexNumbers(1.0, 2.0);
+        CalculatorComplexNumbers num1 = new CalculatorComplexNumbers(null, null);
+        CalculatorComplexNumbers num2 = new CalculatorComplexNumbers(null, null);
 
-        CalculatorController controller = new CalculatorController(view, calculator, num1, num2, service, logic, loger);
+        CalculatorController controller = new CalculatorController(view, calculator, num1, num2, service, loger);
         controller.start();
-        
-
-    
     }
-
-   
-
-
-
 }
