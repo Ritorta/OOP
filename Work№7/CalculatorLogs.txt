@@ -1,6 +1,4 @@
-Addition operation: 5.0 + 1.0i + 2.0 + 1.0i = 7.0 + 2.0i
-Addition operation: 8.0 + 4.0i + 8.0 + 4.0i = 0.0 + 0.0i
-Addition operation: 4.0 + 5.0i + 5.0 + 5.0i = -5.0 + 45.0i
-Addition operation: 8.0 + 2.0i + 16.0 + 2.0i = 0.5076923076923077 + 0.06153846153846154i
-Addition operation: 1.5 + 1.5i + 1.5 + 1.5i = 3.0 + 3.0i
-Addition operation: 1.0 + 3.0i + 4.0 + 5.0i = 5.0 + 8.0i
+Addition operation: -1.0 + 2.0i + -1.0 + 2.0i = -2.0 + 4.0i
+Addition operation: 1.0 + -2.0i + 1.0 + -2.0i = 2.0 + -4.0i
+Addition operation: -1.0 + 2.0i + -1.0 + 2.0i = -2.0 + 4.0i
+Addition operation: -2.0 + 2.0i + -2.0 + 2.0i = -4.0 + 4.0i

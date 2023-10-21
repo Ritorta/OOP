@@ -55,8 +55,10 @@ public class CalculatorController
     public void AdditionOperation()
     {
         System.out.println("First");
+        System.out.println(num1);
         CalculatorComplexNumbers num1 = calculatorService.getComplexNumber();
         System.out.println("Second");
+        System.out.println(num2);
         CalculatorComplexNumbers num2 = calculatorService.getComplexNumber();
         calculator.AdditionOperation(num1, num2);
         CalculatorComplexNumbers sum = calculator.AdditionOperation(num1, num2);

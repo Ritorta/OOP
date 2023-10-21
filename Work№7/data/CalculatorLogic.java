@@ -62,15 +62,69 @@ public class CalculatorLogic implements Calculator
     //   // System.out.println("Sum complex numbers : " + ValidSum + " . " + ImaginarySum + "i");
     // }
 
-    public double parseRealPart(String input) 
+    // public double parseRealPart(String input) 
+    // {
+    //     String validPart = input.split("\\+")[0].trim();
+    //     return Double.parseDouble(validPart);
+    // }
+
+    // public double parseRealPart(String input) 
+    // {
+    //     if (input.startsWith("-")) 
+    //     {
+    //         return Double.parseDouble(input.split("[+-]")[1].trim()) * -1;
+    //     }
+         
+    //     else 
+    //     {
+    //         return Double.parseDouble(input.split("[+-]")[0].trim());
+    //     }
+    // }
+
+    //  public double parseImaginaryPart(String input) 
+    // {
+    //     if (input.startsWith("-")) {
+    //         if (input.matches("-[0-9.]*i")) 
+    //         {
+    //             return -1 * Double.parseDouble(input.split("[+-]")[2].replaceAll("i", "").trim());
+    //         } 
+    //         else 
+    //         {
+    //             return -1 * Double.parseDouble(input.split("[+-]")[2].replaceAll("i", "").trim());
+    //         }
+
+    //     } 
+    //     else 
+    //     {
+    //         if (input.matches("-[0-9.]*i")) 
+    //         {
+    //             return -1 * Double.parseDouble(input.split("[+-]")[1].replaceAll("i", "").trim());
+    //         } 
+    //         else 
+    //         {
+    //             return Double.parseDouble(input.split("[+-]")[1].replaceAll("i", "").trim());
+    //         }
+    //     }
+    // }
+
+    public double parseRealPart (String input) 
     {
-        String validPart = input.split("\\+")[0].trim();
-        return Double.parseDouble(validPart);
+        if (input.startsWith("-") || input.startsWith("+")) 
+        {
+            return Double.parseDouble(input.split("[+-]")[1].trim()) * -1;
+        } 
+        
+        else 
+        {
+            return Double.parseDouble(input.split("[+-]")[0].trim());
+        }
     }
 
-    public double parseImaginaryPart(String input) 
+    public double parseImaginaryPart (String input) 
     {
-        String imaginaryPart = input.split("\\+")[1].replace("i", "").trim();
-        return Double.parseDouble(imaginaryPart);
+        int index = input.startsWith("-") || input.startsWith("+") ? 2 : 1;
+        String res = input.split("[+-]")[index].replaceAll("i", "").trim();
+        System.out.println(input.matches("(.)-[0-9.]+i") ? Double.parseDouble(res) * (-1) : Double.parseDouble(res));
+        return input.matches("(.)-[0-9.]+i") ? Double.parseDouble(res) * (-1) : Double.parseDouble(res);
     }
 }
