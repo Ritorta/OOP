@@ -16,6 +16,4 @@ public interface Calculator
     CalculatorComplexNumbers SubtractionOperation(CalculatorComplexNumbers num1, CalculatorComplexNumbers num2);
     CalculatorComplexNumbers MultiplicationOperation(CalculatorComplexNumbers num1, CalculatorComplexNumbers num2);
     CalculatorComplexNumbers DivisionOperation(CalculatorComplexNumbers num1, CalculatorComplexNumbers num2);
-    //CalculatorComplexNumbers parseComplexNumber(String input);
-
 }

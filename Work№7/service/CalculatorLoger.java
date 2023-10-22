@@ -15,11 +15,7 @@ public class CalculatorLoger
     File file = new File("CalculatorLogs.txt");
     FileWriter writer;
     BufferedReader reader;
-
-    public CalculatorLoger() 
-    {
-        
-    }
+    
     // Создание метода "write", который принимает строковый аргумент "record". 
     public void write(String record) 
     {

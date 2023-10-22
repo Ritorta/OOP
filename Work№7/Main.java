@@ -23,8 +23,8 @@ class Main
         CalculatorLogic logic = new CalculatorLogic();
         CalculatorService service = new CalculatorService(logic);
         CalculatorLoger loger = new CalculatorLoger();
-        CalculatorComplexNumbers num1 = new CalculatorComplexNumbers(null, null);
-        CalculatorComplexNumbers num2 = new CalculatorComplexNumbers(null, null);
+        CalculatorComplexNumbers num1 = new CalculatorComplexNumbers(0.0, 0.0);
+        CalculatorComplexNumbers num2 = new CalculatorComplexNumbers(0.0, 0.0);
 
         CalculatorController controller = new CalculatorController(view, calculator, num1, num2, service, loger);
         controller.start();

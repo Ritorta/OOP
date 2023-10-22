@@ -52,62 +52,6 @@ public class CalculatorLogic implements Calculator
 
     }
 
-    // public CalculatorComplexNumbers parseComplexNumber(String input) 
-    // {
-    //     // Разбор строки вида "a+bi" и создание объекта ComplexNumber
-    //     String[] parts = input.split("[+-]");
-    //     double ValidSum = Double.parseDouble(parts[0]);
-    //     double ImaginarySum = Double.parseDouble(parts[1].replaceAll("[iI]", ""));
-    //     return new CalculatorComplexNumbers(ValidSum, ImaginarySum);
-    //   // System.out.println("Sum complex numbers : " + ValidSum + " . " + ImaginarySum + "i");
-    // }
-
-    // public double parseRealPart(String input) 
-    // {
-    //     String validPart = input.split("\\+")[0].trim();
-    //     return Double.parseDouble(validPart);
-    // }
-
-    // public double parseRealPart(String input) 
-    // {
-    //     if (input.startsWith("-")) 
-    //     {
-    //         return Double.parseDouble(input.split("[+-]")[1].trim()) * -1;
-    //     }
-         
-    //     else 
-    //     {
-    //         return Double.parseDouble(input.split("[+-]")[0].trim());
-    //     }
-    // }
-
-    // public double parseImaginaryPart(String input) 
-    // {
-    //     if (input.startsWith("-")) 
-    //     {
-    //         if (input.matches("-[0-9.]*i")) 
-    //         {
-    //             return -1 * Double.parseDouble(input.split("[+-]")[2].replaceAll("i", "").trim());
-    //         } 
-    //         else 
-    //         {
-    //             return -1 * Double.parseDouble(input.split("[+-]")[2].replaceAll("i", "").trim());
-    //         }
-
-    //     } 
-    //     else 
-    //     {
-    //         if (input.matches("-[0-9.]*i")) 
-    //         {
-    //             return -1 * Double.parseDouble(input.split("[+-]")[1].replaceAll("i", "").trim());
-    //         } 
-    //         else 
-    //         {
-    //             return Double.parseDouble(input.split("[+-]")[1].replaceAll("i", "").trim());
-    //         }
-    //     }
-    // }
-
     public double parseRealPart (String input) 
     {
         

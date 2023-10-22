@@ -13,6 +13,7 @@ public class CalculatorController
     private CalculatorComplexNumbers num1, num2;
     private CalculatorService calculatorService;
     private CalculatorLoger loger;
+    private int regcount;
 
     public CalculatorController(CalculatorView view, Calculator calculator, 
     CalculatorComplexNumbers num1, CalculatorComplexNumbers num2, 
@@ -23,12 +24,12 @@ public class CalculatorController
         this.num1 = num1;
         this.num2 = num2;
         this.calculatorService = calculatorService;
-        this.loger = loger; 
-        
+        this.loger = loger;
     }
 
     public void start()
     {
+        
         boolean run = true;
         while(run)
         {
@@ -55,14 +56,15 @@ public class CalculatorController
     public void AdditionOperation()
     {
         System.out.println("First");
-        System.out.println(num1);
         CalculatorComplexNumbers num1 = calculatorService.getComplexNumber();
+        System.out.println(num1);
         System.out.println("Second");
-        System.out.println(num2);
         CalculatorComplexNumbers num2 = calculatorService.getComplexNumber();
+        System.out.println(num2);
         calculator.AdditionOperation(num1, num2);
+        regcount++;
         CalculatorComplexNumbers sum = calculator.AdditionOperation(num1, num2);
-        String record = "Addition operation: " + num1.toString() + " + " + num2.toString() + " = " + sum.toString();
+        String record = "Addition operation: " + regcount + ". " + num1.toString() + " + " + num2.toString() + " = " + sum.toString();
         // String result = String.format("%.1f + %.1fi", num1.getNumberValid(), num2.getNumberImaginary());
         loger.write(record);
 
@@ -76,7 +78,8 @@ public class CalculatorController
         CalculatorComplexNumbers num2 = calculatorService.getComplexNumber();
         calculator.SubtractionOperation(num1, num2);
         CalculatorComplexNumbers sum = calculator.SubtractionOperation(num1, num2);
-        String record = "Addition operation: " + num1.toString() + " + " + num2.toString() + " = " + sum.toString();
+        regcount++;
+        String record = "Addition operation: " + regcount + ". " + num1.toString() + " + " + num2.toString() + " = " + sum.toString();
         // String result = String.format("%.1f + %.1fi", num1.getNumberValid(), num2.getNumberImaginary());
         loger.write(record);
     }
@@ -89,7 +92,8 @@ public class CalculatorController
         CalculatorComplexNumbers num2 = calculatorService.getComplexNumber();
         calculator.MultiplicationOperation(num1, num2);
         CalculatorComplexNumbers sum = calculator.MultiplicationOperation(num1, num2);
-        String record = "Addition operation: " + num1.toString() + " + " + num2.toString() + " = " + sum.toString();
+        regcount++;
+        String record = "Addition operation: " + regcount + ". " + num1.toString() + " + " + num2.toString() + " = " + sum.toString();
         // String result = String.format("%.1f + %.1fi", num1.getNumberValid(), num2.getNumberImaginary());
         loger.write(record);
     }
@@ -102,7 +106,8 @@ public class CalculatorController
         CalculatorComplexNumbers num2 = calculatorService.getComplexNumber();
         calculator.DivisionOperation(num1, num2);
         CalculatorComplexNumbers sum = calculator.DivisionOperation(num1, num2);
-        String record = "Addition operation: " + num1.toString() + " + " + num2.toString() + " = " + sum.toString();
+        regcount++;
+        String record = "Addition operation: " + regcount + ". " + num1.toString() + " + " + num2.toString() + " = " + sum.toString();
         // String result = String.format("%.1f + %.1fi", num1.getNumberValid(), num2.getNumberImaginary());
         loger.write(record);
     }
