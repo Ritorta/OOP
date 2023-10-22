@@ -1,7 +1,5 @@
 package controller;
 
-import java.io.FileReader;
-
 import data.Calculator;
 import data.CalculatorComplexNumbers;
 import view.CalculatorView;
