@@ -39,30 +39,6 @@ public class CalculatorLoger
             throw new RuntimeException(e);
         }
     }
-    //Создание метода "erase", который очищает содержимое файла "CalculatorLogs.txt".  
-    public void erase() 
-    {
-        // Создается новый объект Scanner для чтения файла.
-        Scanner scan = new Scanner("CalculatorLogs.txt");
-        // Затем создается объект Formatter с файлом "CalculatorLogs.txt", что позволяет записывать в него данные.
-        Formatter form = null;
-        try 
-        {
-            form = new Formatter("CalculatorLogs.txt");
-        } 
-        // Если возникает ошибка FileNotFoundException, то выбрасывается исключение RuntimeException.   
-        catch (FileNotFoundException e) 
-        {
-            throw new RuntimeException(e);
-        }
-        // В цикле while происходит чтение файла построчно и затем вызывается метод format() у объекта Formatter, 
-        // который записывает пустую строку, что приводит к удалению соответствующей строки из файла. Затем закрывается Scanner. 
-        while (scan.hasNext()) 
-        {
-            form.format("");
-            scan.next();
-        }
-    }
     // Создание метода "read", который считывает содержимое файла "CalculatorLogs.txt" и возвращает его в виде строки.   
     public String read() 
     {
@@ -91,4 +67,5 @@ public class CalculatorLoger
         // В конце метода возвращается содержимое файла в виде строки.
         return result;
     }
+  
 }

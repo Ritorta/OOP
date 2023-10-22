@@ -1,5 +1,7 @@
 package controller;
 
+import java.io.FileReader;
+
 import data.Calculator;
 import data.CalculatorComplexNumbers;
 import view.CalculatorView;
@@ -14,6 +16,8 @@ public class CalculatorController
     private CalculatorService calculatorService;
     private CalculatorLoger loger;
     private int regcount;
+    
+    
 
     public CalculatorController(CalculatorView view, Calculator calculator, 
     CalculatorComplexNumbers num1, CalculatorComplexNumbers num2, 
@@ -45,12 +49,21 @@ public class CalculatorController
                 break;
                 case "4": DivisionOperation();
                 break;
-                case "5": run = false;
+                case "5": read();
+                break;
+                case "6": run = false;
                 break;
                 default:
                 System.out.println("Choice number operation: ");
             }
         }
+    }
+
+    public void read() 
+    {
+        CalculatorLoger loger = new CalculatorLoger();
+        String logContents = loger.read();
+        System.out.println(logContents);
     }
 
     public void AdditionOperation()

@@ -25,7 +25,8 @@ public class CalculatorView
             System.out.println("2. Subtraction");
             System.out.println("3. Multiplication");
             System.out.println("4. Division");
-            System.out.println("5. Выход");
+            System.out.println("5. Read Logs");
+            System.out.println("6. Выход");
         }
 
         // Метод для получения выбранной операции от пользователя
