@@ -81,9 +81,10 @@ public class CalculatorLogic implements Calculator
     //     }
     // }
 
-    //  public double parseImaginaryPart(String input) 
+    // public double parseImaginaryPart(String input) 
     // {
-    //     if (input.startsWith("-")) {
+    //     if (input.startsWith("-")) 
+    //     {
     //         if (input.matches("-[0-9.]*i")) 
     //         {
     //             return -1 * Double.parseDouble(input.split("[+-]")[2].replaceAll("i", "").trim());
@@ -109,22 +110,24 @@ public class CalculatorLogic implements Calculator
 
     public double parseRealPart (String input) 
     {
-        if (input.startsWith("-") || input.startsWith("+")) 
-        {
-            return Double.parseDouble(input.split("[+-]")[1].trim()) * -1;
-        } 
         
-        else 
-        {
-            return Double.parseDouble(input.split("[+-]")[0].trim());
-        }
+            if (input.startsWith("-") || input.startsWith("+")) 
+            {
+            //    System.out.println(Double.parseDouble(input.split("[+-]")[1].trim()) * -1);
+                return Double.parseDouble(input.split("[+-]")[1].trim()) * -1;
+            }
+
+            else 
+            {
+                return Double.parseDouble(input.split("[+-]")[0].trim());
+            }
     }
 
     public double parseImaginaryPart (String input) 
     {
         int index = input.startsWith("-") || input.startsWith("+") ? 2 : 1;
         String res = input.split("[+-]")[index].replaceAll("i", "").trim();
-        System.out.println(input.matches("(.)-[0-9.]+i") ? Double.parseDouble(res) * (-1) : Double.parseDouble(res));
+        // System.out.println(input.matches("(.)-[0-9.]+i") ? Double.parseDouble(res) * (-1) : Double.parseDouble(res));
         return input.matches("(.)-[0-9.]+i") ? Double.parseDouble(res) * (-1) : Double.parseDouble(res);
     }
-}
+ }
