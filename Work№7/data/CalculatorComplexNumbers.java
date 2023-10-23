@@ -1,5 +1,5 @@
 package data;
-
+// Модуль комплексных чисел
 public class CalculatorComplexNumbers 
 {
 /** 
@@ -15,7 +15,7 @@ public class CalculatorComplexNumbers
         this.numberImaginary = numberImaginary;
         
     }
-
+    
     public Double getNumberValid() 
     {
         return numberValid;
@@ -31,7 +31,7 @@ public class CalculatorComplexNumbers
     @Override
     public String toString() 
     {
-    return numberValid + " + " + numberImaginary + "i";
+        return numberValid + " + " + numberImaginary + "i";
             
     }
 }

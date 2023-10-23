@@ -8,12 +8,11 @@
 
 import controller.CalculatorController;
 import data.Calculator;
-import data.CalculatorComplexNumbers;
 import data.CalculatorLogic;
 import service.CalculatorLoger;
 import service.CalculatorService;
 import view.CalculatorView;
-
+// Thes's is Main
 class Main
 {
     public static void main(String[] args) 
@@ -23,10 +22,9 @@ class Main
         CalculatorLogic logic = new CalculatorLogic();
         CalculatorService service = new CalculatorService(logic);
         CalculatorLoger loger = new CalculatorLoger();
-        CalculatorComplexNumbers num1 = new CalculatorComplexNumbers(0.0, 0.0);
-        CalculatorComplexNumbers num2 = new CalculatorComplexNumbers(0.0, 0.0);
 
-        CalculatorController controller = new CalculatorController(view, calculator, num1, num2, service, loger);
+        CalculatorController controller = new CalculatorController(view, calculator, service, loger);
+        // Ключь на старт!
         controller.start();
     }
 }

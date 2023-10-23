@@ -3,21 +3,11 @@ package view;
 import java.util.Scanner;
 
 import data.CalculatorComplexNumbers;
+// Мето которое ещё не доделано Work progress...
 public class CalculatorView
 {
-      //  private CalculatorController calculatorController;
-        
-        // // Конструктор класса
-        // public CalculatorView(CalculatorController calculatorController) 
-        // {
-        //     this.calculatorController = calculatorController; 
-    
-        // }
-
-  
         public CalculatorView() {
         }
-
         // Метод для отображения меню и выбора операции
         public void consoleMenu() 
         {
@@ -28,7 +18,6 @@ public class CalculatorView
             System.out.println("5. Read Logs");
             System.out.println("6. Выход");
         }
-
         // Метод для получения выбранной операции от пользователя
         public String getInput() 
         {
@@ -39,7 +28,6 @@ public class CalculatorView
            return scanner.nextLine(); 
             //return choice;
         }
-
         public void displayResult(String result) 
         {
             System.out.println("Result: " + result);
@@ -47,7 +35,7 @@ public class CalculatorView
         
         public void displayResult(CalculatorComplexNumbers result) 
         {
-            System.out.println("Result: " + result.toString());  // Используем toString()
+            System.out.println("Result: " + result.toString());
         
         }
 }    
